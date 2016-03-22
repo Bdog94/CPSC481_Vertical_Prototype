@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="VerticalPrototype1.SelectTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        Height="700" Width="500">
+    <Grid Margin="0,10,10,-36" Background="#FFC5B3C3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="41*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="Table1" Content="1" HorizontalAlignment="Left" Margin="91,129,0,0" VerticalAlignment="Top" Width="110" Height="75" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.479,0.794" FontFamily="Garamond" Click="tableClick"/>
+        <Button x:Name="Table2" Content="2" HorizontalAlignment="Left" Margin="274,129,0,0" VerticalAlignment="Top" Width="110" Height="75" FontFamily="Garamond" FontSize="24" FontWeight="Bold" Click="tableClick" Grid.ColumnSpan="2"/>
+        <Button x:Name="Table3" Content="3" HorizontalAlignment="Left" Margin="91,241,0,0" VerticalAlignment="Top" Width="110" Height="75" FontFamily="Garamond" FontSize="24" FontWeight="Bold" Click="tableClick" />
+        <Button x:Name="Table4" Content="4" HorizontalAlignment="Left" Margin="274,242,0,0" VerticalAlignment="Top" Width="110" Height="75" FontFamily="Garamond" FontSize="24" FontWeight="Bold" Click="tableClick" Grid.ColumnSpan="2"/>
+        <Button x:Name="Table5" Content="5" HorizontalAlignment="Left" Margin="91,363,0,0" VerticalAlignment="Top" Width="110"  Height="75" FontFamily="Garamond" FontSize="24" FontWeight="Bold" Click="tableClick" />
+        <Button x:Name="Table6" Content="6" HorizontalAlignment="Left" Margin="274,363,0,0" VerticalAlignment="Top" Width="110" Height="75" FontFamily="Garamond" FontSize="24" FontWeight="Bold" Click="tableClick" Grid.ColumnSpan="2"/>
+        <Label Content="Select Table" HorizontalAlignment="Left" Margin="140,51,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</UserControl>
