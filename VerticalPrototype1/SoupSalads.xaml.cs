@@ -24,6 +24,8 @@ namespace VerticalPrototype1
         {
             InitializeComponent();
             lblTable.Content = MainWindow.tableNum;
+            saladScroller = CurrentOrder.scroller;
+            stackPanel = CurrentOrder.foodPanel;
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
@@ -38,6 +40,10 @@ namespace VerticalPrototype1
 
         private void btnSoupSalad_Click(object sender, RoutedEventArgs e)
         {
+            FoodItem f = new FoodItem();
+            f.FoodItemName = "Caesar Salad";
+            f.FoodCustomizations = "Stuff";
+            MainWindow.currentOrderInterface.addFoodItem(f);
             if (caeserDropDown.Visibility == System.Windows.Visibility.Hidden)
             {
                 caeserDropDown.Visibility = System.Windows.Visibility.Visible;

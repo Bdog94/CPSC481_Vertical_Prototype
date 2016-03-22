@@ -53,11 +53,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CurrentOrder.xaml.cs">
+      <DependentUpon>CurrentOrder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dessert.xaml.cs">
       <DependentUpon>Dessert.xaml</DependentUpon>
     </Compile>
     <Compile Include="Drinks.xaml.cs">
       <DependentUpon>Drinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FoodItem.xaml.cs">
+      <DependentUpon>FoodItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Meals.xaml.cs">
       <DependentUpon>Meals.xaml</DependentUpon>
@@ -83,11 +89,19 @@
     <Compile Include="WineBeer.xaml.cs">
       <DependentUpon>WineBeer.xaml</DependentUpon>
     </Compile>
+    <Page Include="CurrentOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dessert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Drinks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FoodItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -22,12 +22,14 @@ namespace VerticalPrototype1
     {
         public static String tableNum;
         static MainWindow m;
+        public static CurrentOrder currentOrderInterface;
         public MainWindow()
         {
             m = this;
             InitializeComponent();
             SelectTable lw = new SelectTable();
             stackPanel.Children.Add(lw);
+            currentOrderInterface = new CurrentOrder();
         }
 
         public static void switchToTableView()
