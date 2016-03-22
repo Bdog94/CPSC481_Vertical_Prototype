@@ -34,5 +34,18 @@ namespace VerticalPrototype1
         {
             MainWindow.switchToTableView();
         }
+
+        private void btnSoupSalad_Click(object sender, RoutedEventArgs e)
+        {
+            if (caeserDropDown.Visibility == System.Windows.Visibility.Hidden)
+            {
+                caeserDropDown.Visibility = System.Windows.Visibility.Visible;
+            }
+            else if (caeserDropDown.Visibility == System.Windows.Visibility.Visible)
+            {
+                caeserDropDown.Visibility = System.Windows.Visibility.Hidden;
+            }
+            
+        }
     }
 }

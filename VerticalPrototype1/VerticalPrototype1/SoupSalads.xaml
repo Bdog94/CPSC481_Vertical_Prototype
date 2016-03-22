@@ -2,16 +2,24 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Height="700" Width="500">
-    <Grid Margin="10,10,10,0" Background="#FFC5B3C3">
-        <Button Content="Clam&#xD;&#xA;Soup" HorizontalAlignment="Left" Margin="202,94,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24"/>
-        <Button Content="Tomato&#xD;&#xA; Soup" HorizontalAlignment="Left" Margin="338,94,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24" />
-        <Button x:Name="btnSoupSalad" Content="Caesar&#xD;&#xA;Salad" HorizontalAlignment="Left" Margin="202,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" Height="75" FontSize="24" FontFamily="Garamond"/>
-        <Button Content="House&#xA;Salad" HorizontalAlignment="Left" Margin="338,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond"/>
-        <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,530,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click"/>
-        <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="123,33,0,0" VerticalAlignment="Top" Width="82"/>
-        <Label Content="Table Number:" HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
-        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold"/>
-        <Canvas HorizontalAlignment="Left" Height="542" Margin="10,39,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED">
+    <UserControl.Resources>
+        <Storyboard x:Key="OnContextMenuClosing1"/>
+        <Storyboard x:Key="OnClick1"/>
+    </UserControl.Resources>
+    <Grid Background="#FF9CAFB7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="373*"/>
+            <RowDefinition Height="317*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Clam&#xD;&#xA;Soup" HorizontalAlignment="Left" Margin="202,94,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24" Background="#FFEAD2AC"/>
+        <Button Content="Tomato&#xD;&#xA; Soup" HorizontalAlignment="Left" Margin="338,94,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24" Background="#FFEAD2AC" />
+        <Button x:Name="btnSoupSalad" Content="Caesar&#xD;&#xA;Salad" HorizontalAlignment="Left" Margin="202,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" Height="75" FontSize="24" FontFamily="Garamond" Click="btnSoupSalad_Click" Background="#FFEAD2AC"/>
+        <Button Content="House&#xA;Salad" HorizontalAlignment="Left" Margin="338,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond" Background="#FFEAD2AC"/>
+        <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,157,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click" Grid.Row="1"/>
+        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,201,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Grid.Row="1"/>
+        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,117,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click" Grid.Row="1"/>
+        <Label Content="Soups &amp; Salads" HorizontalAlignment="Left" Margin="202,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
+        <Canvas HorizontalAlignment="Left" Height="542" Margin="10,39,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED" Grid.RowSpan="2">
             <ScrollViewer Canvas.Left="-1" Canvas.Top="60" Height="358" Width="175">
                 <StackPanel x:Name="stackPanel"/>
 
@@ -20,12 +28,16 @@
             <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="87" Canvas.Top="480"/>
             <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480"/>
         </Canvas>
-        <Label x:Name="lblTable_Copy" Content="" HorizontalAlignment="Left" Margin="127,49,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="120,42.79,0,0" VerticalAlignment="Top" Width="82"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="10,78.594,0,0" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Grid.Row="1"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
-        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,490,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click"/>
-        <Label Content="Soups &amp; Salads" HorizontalAlignment="Left" Margin="202,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="10,457,0,0" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62"/>
+        <Menu x:Name="caeserDropDown" HorizontalAlignment="Left" Height="116" Margin="202,348,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Visible">
+            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+        </Menu>
 
     </Grid>
 </UserControl>
