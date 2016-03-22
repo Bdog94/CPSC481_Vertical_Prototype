@@ -20,6 +20,7 @@ namespace VerticalPrototype1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static String tableNum;
         static MainWindow m;
         public MainWindow()
         {

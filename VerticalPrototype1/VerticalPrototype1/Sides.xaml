@@ -20,7 +20,7 @@
             <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="87" Canvas.Top="480"/>
             <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480"/>
         </Canvas>
-        <Label x:Name="lblTable_Copy" Content="" HorizontalAlignment="Left" Margin="127,49,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label x:Name="lblTable_Copy" Content="" HorizontalAlignment="Left" Margin="123,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontSize="14" FontWeight="Bold"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
         <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,490,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click"/>

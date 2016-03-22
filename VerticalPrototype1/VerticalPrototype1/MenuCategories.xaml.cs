@@ -24,6 +24,7 @@ namespace VerticalPrototype1
         public MenuCategories()
         {
             InitializeComponent();
+            lblTable.Content = MainWindow.tableNum;
         }
 
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)

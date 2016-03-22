@@ -23,6 +23,7 @@ namespace VerticalPrototype1
         public Starters()
         {
             InitializeComponent();
+            lblTable.Content = MainWindow.tableNum;
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)

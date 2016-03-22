@@ -27,6 +27,8 @@ namespace VerticalPrototype1
 
         private void tableClick(object sender, RoutedEventArgs e)
         {
+            Button b = e.Source as Button;
+            MainWindow.tableNum = b.Content as String;
             MainWindow.switchToMenuCategoriesView();
         }
     }

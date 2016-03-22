@@ -6,7 +6,7 @@
         <Button Content="    Non &#xD;&#xA;Alcoholic" HorizontalAlignment="Left" Margin="202,96,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24" Click="btnNonAlcohol_Click"/>
         <Button Content="Wine &amp; &#xD;&#xA;   Beer" HorizontalAlignment="Left" Margin="341,96,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24" Click="btnAlcohol_Click" />
         <Button x:Name="btnSoupSalad" Content="Soup &amp;&#xD;&#xA;  Salad" HorizontalAlignment="Left" Margin="202,189,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" Height="75" FontSize="24" FontFamily="Garamond" Click="btnSoupSalad_Click"/>
-        <Button x:Name="Starters" Content="Starters&#xD;&#xA;" HorizontalAlignment="Left" Margin="341,189,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond" Click="Starters_Click"/>
+        <Button x:Name="Starters" Content="Starters" HorizontalAlignment="Left" Margin="341,189,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond" Click="Starters_Click"/>
         <Button x:Name="Meals" Content="Meals" HorizontalAlignment="Left" Margin="202,284,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond" Click="Meals_Click"/>
         <Button x:Name="dessert" Content="Dessert" HorizontalAlignment="Left" Margin="341,284,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond" Click="dessert_Click" />
         <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,530,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click"/>
@@ -25,7 +25,7 @@
             <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="87" Canvas.Top="480"/>
             <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480"/>
         </Canvas>
-        <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="121.877,42.79,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="122,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontSize="14" FontWeight="Bold"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
         <Button Content="Delete" HorizontalAlignment="Left" Margin="10,457,0,0" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
