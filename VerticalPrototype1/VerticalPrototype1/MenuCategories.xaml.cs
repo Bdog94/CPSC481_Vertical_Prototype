@@ -35,5 +35,40 @@ namespace VerticalPrototype1
         {
             MainWindow.switchToSoupSalad();
         }
+
+        private void btnNonAlcohol_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.switchToBeverages();
+        }
+
+        private void btnAlcohol_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.switchToAlcohol();
+        }
+
+        private void Starters_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.switchToStarters();
+        }
+
+        private void Meals_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.switchToMeals();
+        }
+
+        private void dessert_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.switchToDessert();
+        }
+
+        private void Sides_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.switchToSides();
+        }
+
+        private void Specials_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow.switchToKids();
+        }
     }
 }

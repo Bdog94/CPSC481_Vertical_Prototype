@@ -51,6 +51,41 @@ namespace VerticalPrototype1
             SoupSalads mc = new SoupSalads();
             m.switchTo(mc);
         }
+        public static void switchToBeverages()
+        {
+            Drinks d = new Drinks();
+            m.switchTo(d);
+        }
+        public static void switchToAlcohol()
+        {
+            WineBeer wb = new WineBeer();
+            m.switchTo(wb);
+        }
+        public static void switchToStarters()
+        {
+            Starters s = new Starters();
+            m.switchTo(s);
+        }
+        public static void switchToMeals()
+        {
+            Meals ml = new Meals();
+            m.switchTo(ml);
+        }
+        public static void switchToDessert()
+        {
+            Dessert d = new Dessert();
+            m.switchTo(d);
+        }
+        public static void switchToSides()
+        {
+            Sides d = new Sides();
+            m.switchTo(d);
+        }
+        public static void switchToKids()
+        {
+            Specials s = new Specials();
+            m.switchTo(s);
+        }
 
     }
 }

@@ -53,6 +53,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dessert.xaml.cs">
+      <DependentUpon>Dessert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Drinks.xaml.cs">
+      <DependentUpon>Drinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Meals.xaml.cs">
+      <DependentUpon>Meals.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuCategories.xaml.cs">
       <DependentUpon>MenuCategories.xaml</DependentUpon>
     </Compile>
@@ -62,6 +71,26 @@
     <Compile Include="SoupSalads.xaml.cs">
       <DependentUpon>SoupSalads.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Specials.xaml.cs">
+      <DependentUpon>Specials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Starters.xaml.cs">
+      <DependentUpon>Starters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sides.xaml.cs">
+      <DependentUpon>Sides.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WineBeer.xaml.cs">
+      <DependentUpon>WineBeer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dessert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drinks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +103,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Meals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuCategories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -83,6 +116,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SoupSalads.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Specials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Starters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sides.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WineBeer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
