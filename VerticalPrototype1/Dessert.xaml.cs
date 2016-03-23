@@ -20,6 +20,7 @@ namespace VerticalPrototype1
     /// </summary>
     public partial class Dessert : UserControl
     {
+        
         public Dessert()
         {
             InitializeComponent();
@@ -33,6 +34,13 @@ namespace VerticalPrototype1
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.switchToTableView();
+        }
+
+        private void note_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.window = new Dessert();
+            MainWindow.switchToAddNote();
+
         }
     }
 }

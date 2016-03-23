@@ -380,5 +380,12 @@ namespace VerticalPrototype1
                 TomatoSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.window = new SoupSalads();
+            MainWindow.switchToAddNote();
+        }
+        
     }
 }

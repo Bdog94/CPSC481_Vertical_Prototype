@@ -34,5 +34,11 @@ namespace VerticalPrototype1
         {
             MainWindow.switchToTableView();
         }
+
+        private void note_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.window = new Specials();
+            MainWindow.switchToAddNote();
+        }
     }
 }

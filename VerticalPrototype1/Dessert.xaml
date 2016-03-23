@@ -18,7 +18,7 @@
             </ScrollViewer>
             <Button Content="Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="87" Canvas.Top="418"/>
             <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="87" Canvas.Top="480"/>
-            <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480"/>
+            <Button x:Name="note" Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480" Click="note_Click"/>
         </Canvas>
         <Label x:Name="lblTable_Copy" Content="" HorizontalAlignment="Left" Margin="116,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontWeight="Bold" FontSize="14"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>

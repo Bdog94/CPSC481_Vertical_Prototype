@@ -23,6 +23,7 @@ namespace VerticalPrototype1
         public static String tableNum;
         static MainWindow m;
         public static CurrentOrder currentOrderInterface;
+        public static Object window;
         public MainWindow()
         {
             m = this;
@@ -88,6 +89,16 @@ namespace VerticalPrototype1
         {
             Specials s = new Specials();
             m.switchTo(s);
+        }
+        public static void switchToAddNote()
+        {
+            AddNote n = new AddNote();
+            m.switchTo(n);
+        }
+        public static void switchBack()
+        {
+
+            m.switchTo((UserControl)window);
         }
 
     }

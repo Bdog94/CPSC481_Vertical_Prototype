@@ -71,5 +71,11 @@ namespace VerticalPrototype1
         {
             MainWindow.switchToKids();
         }
+
+        private void note_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.window = new MenuCategories();
+            MainWindow.switchToAddNote();
+        }
     }
 }

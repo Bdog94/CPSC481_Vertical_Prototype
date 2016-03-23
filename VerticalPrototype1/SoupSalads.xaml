@@ -17,7 +17,7 @@
         <Button x:Name="HouseSalad" Content="House&#xA;Salad" HorizontalAlignment="Left" Margin="338,285,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond" Background="#FFEAD2AC" Click="HouseSalad_Click"/>
         <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,157,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click" Grid.Row="1"/>
         <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,201,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Grid.Row="1"/>
-        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,117,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click" Grid.Row="1"/>
+        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,118.333,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click" Grid.Row="1"/>
         <Label Content="Soups &amp; Salads" HorizontalAlignment="Left" Margin="202,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
         <Canvas HorizontalAlignment="Left" Height="542" Margin="10,39,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED" Grid.RowSpan="2">
             <ScrollViewer x:Name="saladScroller" Canvas.Left="-1" Canvas.Top="60" Height="358" Width="175">
@@ -26,7 +26,7 @@
             </ScrollViewer>
             <Button Content="Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="87" Canvas.Top="418"/>
             <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="87" Canvas.Top="480"/>
-            <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480"/>
+            <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480" Click="Button_Click"/>
         </Canvas>
         <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="120,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontSize="14" FontWeight="Bold"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
@@ -34,9 +34,9 @@
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
         <Menu x:Name="caeserDropDown" HorizontalAlignment="Left" Height="116" Margin="202,360,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="AllergySelect" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Add" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Remove" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Side" Height="27" Width="95" Background="#FFEAD2AC"/>
         </Menu>
         <Menu x:Name="Allergies" HorizontalAlignment="Left" Height="116" Margin="202,359,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="GlutenFree" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click"/>
@@ -46,9 +46,9 @@
         </Menu>
         <Menu x:Name="caeserDropDown_1" HorizontalAlignment="Left" Height="116" Margin="338,359,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="AllergySelect1" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click1"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Add" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Remove" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Side" Height="27" Width="95" Background="#FFEAD2AC"/>
         </Menu>
         <Menu x:Name="Allergies_1" HorizontalAlignment="Left" Height="116" Margin="338,359,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Grid.RowSpan="2" Visibility="Hidden">
             <Button x:Name="GlutenFree1" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click1"/>
@@ -58,9 +58,9 @@
         </Menu>
         <Menu x:Name="ClamSoupDropDown" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="AllergySelect2" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click2"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Add" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Remove" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Side" Height="27" Width="95" Background="#FFEAD2AC"/>
         </Menu>
         <Menu x:Name="Allergies_2" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="GlutenFree2" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click2"/>
@@ -76,9 +76,9 @@
         </Menu>
         <Menu x:Name="TomatoSoupDropDown" HorizontalAlignment="Left" Height="116" Margin="338,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="AllergySelect3" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect3_Click"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
-            <Button Content="Button" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Add" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Remove" Height="27" Width="95" Background="#FFEAD2AC"/>
+            <Button Content="Side" Height="27" Width="95" Background="#FFEAD2AC"/>
         </Menu>
 
     </Grid>
