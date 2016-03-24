@@ -97,6 +97,11 @@ namespace VerticalPrototype1
             AddNote n = new AddNote();
             m.switchTo(n);
         }
+        public static void switchToPastOrders()
+        {
+            PastOrders po = new PastOrders();
+            m.switchTo(po);
+        }
         public static void switchBack()
         {
 

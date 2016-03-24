@@ -22,11 +22,13 @@ namespace VerticalPrototype1
     {
         public static StackPanel foodPanel;
         public static ScrollViewer scroller;
+        public static int id = 0;
         public CurrentOrder()
         {
             InitializeComponent();
             foodPanel= stackPanel;
             scroller = svFoodItems;
+            id++;
         }
 
         public void addFoodItem(FoodItem f)
