@@ -14,9 +14,7 @@
             </TransformGroup>
         </Canvas.RenderTransform>
         <ScrollViewer x:Name="svFoodItems" Height="358" Width="175" Canvas.Top="-1">
-            <StackPanel x:Name="stackPanel">
-                <Button Content="Button" Width="75"/>
-            </StackPanel>
+            <StackPanel x:Name="stackPanel"/>
 
         </ScrollViewer>
         <StackPanel Height="100" Canvas.Top="-1" Width="157"/>

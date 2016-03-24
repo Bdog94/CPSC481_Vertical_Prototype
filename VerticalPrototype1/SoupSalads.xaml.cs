@@ -24,12 +24,15 @@ namespace VerticalPrototype1
         {
             InitializeComponent();
             lblTable.Content = MainWindow.tableNum;
-            saladScroller = CurrentOrder.scroller;
-            stackPanel = CurrentOrder.foodPanel;
+            stackPanelSalad.Children.Add(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
+           
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
+            stackPanelSalad.Children.Remove(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             MainWindow.switchToMenuCategoriesView();
         }
 
@@ -38,7 +41,7 @@ namespace VerticalPrototype1
             MainWindow.switchToTableView();
         }
 
-        //Caesar Salad
+//Caesar Salad
 
         private void btnSoupSalad_Click(object sender, RoutedEventArgs e)
         {
@@ -101,6 +104,16 @@ namespace VerticalPrototype1
             caeserDropDown.Visibility = System.Windows.Visibility.Hidden; 
 
         }
+        private void dressingside_Click(object sender, RoutedEventArgs e)
+        {
+            sideCaesarBtn.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void sideCS_Click(object sender, RoutedEventArgs e)
+        {
+            sideCaesarBtn.Visibility = System.Windows.Visibility.Visible;
+            caeserDropDown.Visibility = System.Windows.Visibility.Hidden;
+        }
+
 
 
 //house salad
@@ -139,6 +152,34 @@ namespace VerticalPrototype1
         private void Paleo_Click1(object sender, RoutedEventArgs e)
         {
             Allergies_1.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void chickenHS_Click(object sender, RoutedEventArgs e)
+        {
+            AddHS.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void dressingHS_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveHS.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void removeHSbtn_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveHS.Visibility = System.Windows.Visibility.Visible;
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void AddHSbtn_Click(object sender, RoutedEventArgs e)
+        {
+            AddHS.Visibility = System.Windows.Visibility.Visible;
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void dHSside_Click(object sender, RoutedEventArgs e)
+        {
+
+            SideHS.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void sideHSbtn_Click(object sender, RoutedEventArgs e)
+        {
+            SideHS.Visibility = System.Windows.Visibility.Visible;
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Hidden;
         }
 
 //clam soup
@@ -253,6 +294,25 @@ namespace VerticalPrototype1
                 TomatoSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
         }
 
+        private void cts_Click(object sender, RoutedEventArgs e)
+        {
+            AddTS.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void gcts_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveTS.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddTS.Visibility = System.Windows.Visibility.Visible;
+            TomatoSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            RemoveTS.Visibility = System.Windows.Visibility.Visible;
+            TomatoSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
+        }
+
         private void dropdownMenuUp(object sender, MouseWheelEventArgs e)
         {
             caeserDropDown.Visibility = System.Windows.Visibility.Hidden;
@@ -273,6 +333,24 @@ namespace VerticalPrototype1
             MainWindow.window = new SoupSalads();
             MainWindow.switchToAddNote();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

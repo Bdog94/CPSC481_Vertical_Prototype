@@ -33,5 +33,50 @@ namespace VerticalPrototype1
         {
             foodPanel.Children.Add(f);
         }
+
+        public void Delete()
+        {
+            Stack<FoodItem> removeStack = new Stack<FoodItem>();
+            foreach(object child in stackPanel.Children)
+            {
+            if (child is FoodItem )
+            {
+                FoodItem f = child as FoodItem;
+                if (f.isChecked)
+                {
+                    removeStack.Push(f);
+                    //stackPanel.Children.Remove(f);
+                }
+            }
+            }
+
+            foreach (FoodItem f in removeStack)
+            {
+                stackPanel.Children.Remove(f);
+            }
+        }
+
+        public void Copy()
+        {
+            Stack<FoodItem> copyStack = new Stack<FoodItem>();
+            foreach (object child in stackPanel.Children)
+            {
+                if (child is FoodItem)
+                {
+                    FoodItem f = child as FoodItem;
+                    FoodItem fCopy = new FoodItem(f);
+                    if (f.isChecked)
+                    {
+                        copyStack.Push(fCopy);
+                        //stackPanel.Children.Remove(f);
+                    }
+                }
+            }
+
+            foreach (FoodItem f in copyStack)
+            {
+                stackPanel.Children.Add(f);
+            }
+        }
     }
 }

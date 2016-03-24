@@ -23,6 +23,7 @@ namespace VerticalPrototype1
         public static String tableNum;
         static MainWindow m;
         public static CurrentOrder currentOrderInterface;
+        public static CurrentOrderSelection currentOrderSelection;
         public static Object window;
         public MainWindow()
         {
@@ -31,6 +32,7 @@ namespace VerticalPrototype1
             SelectTable lw = new SelectTable();
             stackPanel.Children.Add(lw);
             currentOrderInterface = new CurrentOrder();
+            currentOrderSelection = new CurrentOrderSelection();
         }
 
         public static void switchToTableView()
