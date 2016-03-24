@@ -24,5 +24,20 @@ namespace VerticalPrototype1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Delete_Button(object sender, RoutedEventArgs e)
+        {
+            MainWindow.currentOrderInterface.Delete();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow.currentOrderInterface.Copy();
+        }
     }
 }

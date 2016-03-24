@@ -21,7 +21,7 @@ namespace VerticalPrototype1
     public partial class FoodItem : UserControl
     {
         private string foodItemName;
-        public bool isChecked;
+        public bool isChecked = false;
 
         public string FoodItemName
         {
@@ -37,7 +37,7 @@ namespace VerticalPrototype1
         {
             get { return foodCustomizations; }
             set { foodCustomizations = value;
-            lblFoodName.Content = foodCustomizations;
+            lblCustom.Content = foodCustomizations;
             }
         }
 
@@ -47,9 +47,27 @@ namespace VerticalPrototype1
             InitializeComponent();
         }
 
+        public FoodItem(FoodItem f)
+        {
+            InitializeComponent();
+            foodItemName = f.foodItemName;
+            lblFoodName.Content = foodItemName;
+
+            foodCustomizations = f.foodCustomizations;
+            lblCustom.Content = foodCustomizations;
+        }
+
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
+            if (isChecked)
+            {
+                isChecked = false;
+            }
+            else
+            {
+                isChecked = true;
+            }
         }
     }
 }

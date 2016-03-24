@@ -7,7 +7,7 @@
     <Grid Margin="0,0,0,212">
         <Canvas HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="300" Background="#FFF9F9F9">
             <Label x:Name="lblFoodName" Content="Default Food Item" Canvas.Left="10" Canvas.Top="10" Width="115"/>
-            <Label Content="Default Customizations" Canvas.Left="10" Canvas.Top="36" Width="280" Height="42" RenderTransformOrigin="0.096,-0.4"/>
+            <Label x:Name="lblCustom" Content="Default Customizations" Canvas.Left="10" Canvas.Top="36" Width="280" Height="42" RenderTransformOrigin="0.096,-0.4"/>
             <CheckBox Content="" Canvas.Left="125" Canvas.Top="16" Checked="CheckBox_Checked"/>
         </Canvas>
 
