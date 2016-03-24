@@ -24,12 +24,14 @@ namespace VerticalPrototype1
         {
             InitializeComponent();
             lblTable.Content = MainWindow.tableNum;
-            saladScroller = CurrentOrder.scroller;
-            stackPanel = CurrentOrder.foodPanel;
+            stackPanelSalad.Children.Add(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
+           
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
+            stackPanelSalad.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToMenuCategoriesView();
         }
 
@@ -385,6 +387,11 @@ namespace VerticalPrototype1
         {
             MainWindow.window = new SoupSalads();
             MainWindow.switchToAddNote();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
         
     }

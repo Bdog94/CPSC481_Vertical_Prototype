@@ -20,17 +20,17 @@
         <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,118.333,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click" Grid.Row="1"/>
         <Label Content="Soups &amp; Salads" HorizontalAlignment="Left" Margin="202,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
         <Canvas HorizontalAlignment="Left" Height="542" Margin="10,39,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED" Grid.RowSpan="2">
-            <ScrollViewer x:Name="saladScroller" Canvas.Left="-1" Canvas.Top="60" Height="358" Width="175">
-                <StackPanel x:Name="stackPanel"/>
+            <ScrollViewer x:Name="saladScroller" Canvas.Top="60" Height="358" Width="175" Canvas.Left="-1">
+                <StackPanel x:Name="stackPanelSalad" Width="146"/>
 
             </ScrollViewer>
-            <Button Content="Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="87" Canvas.Top="418"/>
-            <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="87" Canvas.Top="480"/>
-            <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480" Click="Button_Click"/>
+            <Button Content="Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="-319" Canvas.Top="221"/>
+            <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="-532" Canvas.Top="231"/>
+            <Button Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="95" Canvas.Left="-304"/>
         </Canvas>
         <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="120,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontSize="14" FontWeight="Bold"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="10,78.594,0,0" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Grid.Row="1"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="-472,36,0,0" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Grid.Row="1" Click="Button_Click_1"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
         <Menu x:Name="caeserDropDown" HorizontalAlignment="Left" Height="116" Margin="202,360,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="AllergySelect" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click"/>
@@ -80,6 +80,7 @@
             <Button Content="Remove" Height="27" Width="95" Background="#FFEAD2AC"/>
             <Button Content="Side" Height="27" Width="95" Background="#FFEAD2AC"/>
         </Menu>
+        <StackPanel x:Name="stkPanelOptions" HorizontalAlignment="Left" Height="124" Margin="10,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.661,0.045"/>
 
     </Grid>
 </UserControl>

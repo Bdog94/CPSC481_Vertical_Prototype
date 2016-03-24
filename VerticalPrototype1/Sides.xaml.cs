@@ -23,6 +23,7 @@ namespace VerticalPrototype1
         public Sides()
         {
             InitializeComponent();
+            stackPanelSides.Children.Add(MainWindow.currentOrderInterface);
             lblTable_Copy.Content = MainWindow.tableNum;
         }
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)

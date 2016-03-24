@@ -59,6 +59,9 @@
     <Compile Include="CurrentOrder.xaml.cs">
       <DependentUpon>CurrentOrder.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CurrentOrderSelection.xaml.cs">
+      <DependentUpon>CurrentOrderSelection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dessert.xaml.cs">
       <DependentUpon>Dessert.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CurrentOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CurrentOrderSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

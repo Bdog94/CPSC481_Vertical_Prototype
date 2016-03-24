@@ -33,5 +33,21 @@ namespace VerticalPrototype1
         {
             foodPanel.Children.Add(f);
         }
+
+        public void Delete()
+        {
+            foreach(object child in stackPanel.Children)
+            {
+            if (child is FoodItem )
+            {
+                FoodItem f = child as FoodItem;
+                if (f.isChecked)
+                {
+                    stackPanel.Children.Remove(f);
+                }
+            }
+
+            }
+        }
     }
 }

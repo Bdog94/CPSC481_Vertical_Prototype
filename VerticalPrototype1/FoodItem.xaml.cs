@@ -21,6 +21,7 @@ namespace VerticalPrototype1
     public partial class FoodItem : UserControl
     {
         private string foodItemName;
+        public bool isChecked;
 
         public string FoodItemName
         {
@@ -44,6 +45,11 @@ namespace VerticalPrototype1
         public FoodItem()
         {
             InitializeComponent();
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
