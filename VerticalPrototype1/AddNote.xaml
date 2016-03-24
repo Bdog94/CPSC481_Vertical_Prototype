@@ -10,7 +10,7 @@
         </Grid.RowDefinitions>
         <TextBox x:Name="Note" HorizontalAlignment="Left" Height="410" Margin="32,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" FontFamily="Garamond" FontSize="36" Grid.RowSpan="3"/>
         <Label Content="Add a Note For the Kitchen" HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond" RenderTransformOrigin="0.192,0.558"/>
-        <Button x:Name="AddToitem" Content="Add to Item" HorizontalAlignment="Left" Margin="142,169.333,0,0" VerticalAlignment="Top" Width="199" Height="63" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Grid.Row="2"/>
+        <Button x:Name="AddToitem" Content="Add to Order" HorizontalAlignment="Left" Margin="142,169.333,0,0" VerticalAlignment="Top" Width="199" Height="63" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Grid.Row="2"/>
         <Button x:Name="ClearButton" Content="Clear" HorizontalAlignment="Left" Margin="266,101.333,0,0" VerticalAlignment="Top" Width="199" Height="63" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="ClearButton_Click" Grid.Row="2"/>
         <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="32,101.333,0,0" VerticalAlignment="Top" Width="199" Height="63" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackButton_Click" Grid.Row="2"/>
 
