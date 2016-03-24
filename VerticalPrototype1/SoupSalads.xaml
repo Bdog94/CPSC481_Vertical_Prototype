@@ -20,7 +20,7 @@
         <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,118.333,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click" Grid.Row="1"/>
         <Label Content="Soups &amp; Salads" HorizontalAlignment="Left" Margin="202,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
         <Canvas HorizontalAlignment="Left" Height="542" Margin="10,39,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED" Grid.RowSpan="2">
-            <ScrollViewer x:Name="saladScroller" Canvas.Top="60" Height="358" Width="175" Canvas.Left="-1">
+            <ScrollViewer x:Name="saladScroller" Canvas.Top="60" Height="358" Width="175" Canvas.Left="-1" SnapsToDevicePixels="True">
                 <StackPanel x:Name="stackPanelSalad" Width="146"/>
 
             </ScrollViewer>
@@ -29,83 +29,83 @@
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
         <Menu x:Name="caeserDropDown" HorizontalAlignment="Left" Height="116" Margin="202,360,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="AllergySelect" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click"/>
-            <Button x:Name="addcaesar" Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="addcaesar_Click"/>
-            <Button x:Name="removecaesar" Content="Remove" Height="27" Width="95" Background="#FFEAD2AC" Click="removecaesar_Click"/>
-            <Button x:Name="sideCS" Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="sideCS_Click"/>
+            <Button x:Name="AllergySelect" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="addcaesar" Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="addcaesar_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="removecaesar" Content="Remove" Height="27" Width="95" Background="#FFEAD2AC" Click="removecaesar_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="sideCS" Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="sideCS_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="AddCaesarBtn" HorizontalAlignment="Left" Height="116" Margin="202,360,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="Baconbtn" Content="Bacon" Height="27" Width="95" Background="#FFEAD2AC" Click="Baconbtn_Click"/>
+            <Button x:Name="Baconbtn" Content="Bacon" Height="27" Width="95" Background="#FFEAD2AC" Click="Baconbtn_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="removeCaesarBtn" HorizontalAlignment="Left" Height="116" Margin="202,360,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="removeMenu" Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="removeMenu_Click"/>
-            <Button Content="Croutons" Height="27" Width="95" Background="#FFEAD2AC" Click="removeMenu_Click"/>
+            <Button x:Name="removeMenu" Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="removeMenu_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button Content="Croutons" Height="27" Width="95" Background="#FFEAD2AC" Click="removeMenu_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="sideCaesarBtn" HorizontalAlignment="Left" Height="116" Margin="202,360,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="dressingside"  Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="dressingside_Click"/>
+            <Button x:Name="dressingside"  Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="dressingside_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="Allergies" HorizontalAlignment="Left" Height="116" Margin="202,359,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="GlutenFree" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click"/>
-            <Button x:Name="PF" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click"/>
-            <Button x:Name="Vegan" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click"/>
-            <Button x:Name="Paleo" Content="Paleo" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click"/>
+            <Button x:Name="GlutenFree" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="PF" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Vegan" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Paleo" Content="Vegetarian" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="caeserDropDown_1" HorizontalAlignment="Left" Height="116" Margin="338,359,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="AllergySelect1" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click1"/>
-            <Button x:Name="AddHSbtn" Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="AddHSbtn_Click"/>
-            <Button x:Name="removeHSbtn" Content="Remove" Height="27" Width="95" Background="#FFEAD2AC" Click="removeHSbtn_Click"/>
-            <Button x:Name="sideHSbtn" Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="sideHSbtn_Click"/>
+            <Button x:Name="AllergySelect1" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click1" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="AddHSbtn" Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="AddHSbtn_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="removeHSbtn" Content="Remove" Height="27" Width="95" Background="#FFEAD2AC" Click="removeHSbtn_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="sideHSbtn" Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="sideHSbtn_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="AddHS" HorizontalAlignment="Left" Height="116" Margin="338,359,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="chickenHS" Content="Chicken" Height="27" Width="95" Background="#FFEAD2AC" Click="chickenHS_Click"/>
+            <Button x:Name="chickenHS" Content="Chicken" Height="27" Width="95" Background="#FFEAD2AC" Click="chickenHS_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="RemoveHS" HorizontalAlignment="Left" Height="116" Margin="338,359,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="dressingHS" Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="dressingHS_Click" />
+            <Button x:Name="dressingHS" Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="dressingHS_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16" />
         </Menu>
         <Menu x:Name="SideHS" HorizontalAlignment="Left" Height="116" Margin="338,359,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="dHSside"  Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="dHSside_Click" />
+            <Button x:Name="dHSside"  Content="Dressing" Height="27" Width="95" Background="#FFEAD2AC" Click="dHSside_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16" />
         </Menu>
         <Menu x:Name="Allergies_1" HorizontalAlignment="Left" Height="116" Margin="338,359,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Grid.RowSpan="2" Visibility="Hidden">
-            <Button x:Name="GlutenFree1" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click1"/>
-            <Button x:Name="PF1" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click1"/>
-            <Button x:Name="Vegan1" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click1"/>
-            <Button x:Name="Paleo1" Content="Paleo" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click1"/>
+            <Button x:Name="GlutenFree1" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click1" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="PF1" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click1" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Vegan1" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click1" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Paleo1" Content="Vegetarian" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click1" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="ClamSoupDropDown" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="AllergySelect2" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click2"/>
-            <Button x:Name="addBtnCS" Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="addBtnCS_Click"/>
-            <Button x:Name="sideBtnCS" Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="sideBtnCS_Click"/>
+            <Button x:Name="AllergySelect2" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect_Click2" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="addBtnCS" Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="addBtnCS_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="sideBtnCS" Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="sideBtnCS_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="Allergies_2" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="GlutenFree2" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click2"/>
-            <Button x:Name="PF2" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click2"/>
-            <Button x:Name="Vegan2" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click2"/>
-            <Button x:Name="Paleo2" Content="Paleo" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click2"/>
+            <Button x:Name="GlutenFree2" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click2" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="PF2" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click2" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Vegan2" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click2" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Paleo2" Content="Vegetarian" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click2" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="addClamSoup" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="crackers" Content="Crackers" Height="27" Width="95" Background="#FFEAD2AC" Click="crackers_Click"/>
+            <Button x:Name="crackers" Content="Crackers" Height="27" Width="95" Background="#FFEAD2AC" Click="crackers_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="sideClamSoup" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="garlicBread" Content="Garlic Bread" Height="27" Width="95" Background="#FFEAD2AC" Click="garlicBread_Click"/>
+            <Button x:Name="garlicBread" Content="Garlic Bread" Height="27" Width="95" Background="#FFEAD2AC" Click="garlicBread_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
 
 
         <Menu x:Name="Allergies_3" HorizontalAlignment="Left" Height="116" Margin="338,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="GlutenFree3" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click3"/>
-            <Button x:Name="PF3" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click3"/>
-            <Button x:Name="Vegan3" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click3"/>
-            <Button x:Name="Paleo3" Content="Paleo" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click3"/>
+            <Button x:Name="GlutenFree3" Content="GlutenFree" Height="27" Width="95" Background="#FFEAD2AC" Click="GlutenFree_Click3" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="PF3" Content="Peanut Free" Height="27" Width="95" Background="#FFEAD2AC" Click="PF_Click3" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Vegan3" Content="Vegan" Height="27" Width="95" Background="#FFEAD2AC" Click="Vegan_Click3" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button x:Name="Paleo3" Content="Vegetarian" Height="27" Width="95" Background="#FFEAD2AC" Click="Paleo_Click3" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="TomatoSoupDropDown" HorizontalAlignment="Left" Height="116" Margin="338,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="AllergySelect3" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect3_Click"/>
-            <Button Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="Button_Click_1"/>
-            <Button Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="Button_Click_2"/>
+            <Button x:Name="AllergySelect3" Content="Allergies/Diets" Height="27" Width="95" Background="#FFEAD2AC" Click="AllergySelect3_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button Content="Add" Height="27" Width="95" Background="#FFEAD2AC" Click="Button_Click_1" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
+            <Button Content="Side" Height="27" Width="95" Background="#FFEAD2AC" Click="Button_Click_2" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="AddTS" HorizontalAlignment="Left" Height="116" Margin="338,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="cts" Content="Crackers" Height="27" Width="95" Background="#FFEAD2AC" Click="cts_Click"/>
+            <Button x:Name="cts" Content="Crackers" Height="27" Width="95" Background="#FFEAD2AC" Click="cts_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16"/>
         </Menu>
         <Menu x:Name="RemoveTS" HorizontalAlignment="Left" Height="116" Margin="338,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
-            <Button x:Name="gcts" Content="Grilled Cheese" Height="27" Width="95" Background="#FFEAD2AC" Click="gcts_Click" />
+            <Button x:Name="gcts" Content="Grilled Cheese" Height="27" Width="95" Background="#FFEAD2AC" Click="gcts_Click" BorderThickness="0" FontFamily="Garamond" FontSize="16" />
         </Menu>
         <StackPanel x:Name="stkPanelOptions" HorizontalAlignment="Left" Height="124" Margin="10,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.661,0.045"/>
 

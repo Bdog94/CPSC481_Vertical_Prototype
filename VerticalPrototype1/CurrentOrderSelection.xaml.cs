@@ -39,5 +39,13 @@ namespace VerticalPrototype1
         {
             MainWindow.currentOrderInterface.Copy();
         }
+
+
+       private void Button_Click_2(object sender, RoutedEventArgs e)
+       {
+          //  MainWindow.switchToAddNote();
+       }
+
+
     }
 }

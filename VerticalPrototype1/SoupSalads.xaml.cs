@@ -26,6 +26,7 @@ namespace VerticalPrototype1
             lblTable.Content = MainWindow.tableNum;
             stackPanelSalad.Children.Add(MainWindow.currentOrderInterface);
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
+            
            
         }
 
@@ -333,6 +334,8 @@ namespace VerticalPrototype1
             MainWindow.window = new SoupSalads();
             MainWindow.switchToAddNote();
         }
+
+
 
 
 
