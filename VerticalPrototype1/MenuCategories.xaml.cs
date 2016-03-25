@@ -100,7 +100,9 @@ namespace VerticalPrototype1
 
         private void PastOrders(object sender, RoutedEventArgs e)
         {
-            //MainWindow.switchToPastOrders();
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
+            MainWindow.switchToPastOrders();
         }
     }
 }

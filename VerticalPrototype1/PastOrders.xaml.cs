@@ -23,9 +23,19 @@ namespace VerticalPrototype1
         public PastOrders()
         {
             InitializeComponent();
-            Label lbl = new Label();
-            lbl.Content = "Test";
-            stackPanel.Children.Add(lbl);
+            for (int i = 0; i < MainWindow.pastOrders.Count; i++)
+            {
+                Button btn = new Button();
+                btn.Content = "Test " + i;
+                btn.Tag = i;
+                //btn.Click += new EventHandler(ShowCurrentOrderN);
+                stackPanel.Children.Add(btn);
+            }
+        }
+
+        void ShowCurrentOrderN(object sender, EventArgs e)
+        {
+
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)

@@ -24,6 +24,7 @@ namespace VerticalPrototype1
         static MainWindow m;
         public static CurrentOrder currentOrderInterface;
         public static CurrentOrderSelection currentOrderSelection;
+        public static Stack<CurrentOrder> pastOrders;
         public static Object window;
         public MainWindow()
         {
@@ -33,6 +34,7 @@ namespace VerticalPrototype1
             stackPanel.Children.Add(lw);
             currentOrderInterface = new CurrentOrder();
             currentOrderSelection = new CurrentOrderSelection();
+            pastOrders = new Stack<CurrentOrder>();
         }
 
         public static void switchToTableView()
