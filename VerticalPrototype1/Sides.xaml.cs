@@ -36,6 +36,8 @@ namespace VerticalPrototype1
 
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelSides.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToTableView();
         }
 
