@@ -100,7 +100,8 @@ namespace VerticalPrototype1
 
         private void PastOrders(object sender, RoutedEventArgs e)
         {
-            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+
+            stkPanelOptions.Children.Clear();
             stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToPastOrders();
         }

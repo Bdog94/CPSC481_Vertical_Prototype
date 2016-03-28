@@ -32,7 +32,7 @@ namespace VerticalPrototype1
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
-            stackPanelSalad.Children.Remove(MainWindow.currentOrderInterface);
+            stackPanelSalad.Children.Clear();
             stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             MainWindow.switchToMenuCategoriesView();
         }
