@@ -32,7 +32,8 @@ namespace VerticalPrototype1
 
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.switchToTableView();
+            SelectTablePopUp s = new SelectTablePopUp();
+            s.Show();
         }
 
         private void note_Click(object sender, RoutedEventArgs e)

@@ -22,6 +22,8 @@ namespace VerticalPrototype1
     {
         private string foodItemName;
         public bool isChecked = false;
+        public static bool customIsChecked = false;
+        
 
         public string FoodItemName
         {
@@ -32,6 +34,8 @@ namespace VerticalPrototype1
         }
 
         private string foodCustomizations;
+        private string foodCustomizations1;
+        private string foodCustomizations2;
 
         public string FoodCustomizations
         {
@@ -40,7 +44,25 @@ namespace VerticalPrototype1
             lblCustom.Content = foodCustomizations;
             }
         }
+        public string FoodCustomizations1
+        {
+            get { return foodCustomizations1; }
+            set
+            {
+                foodCustomizations1 = value;
+                lblCustom2.Content = foodCustomizations1;
+            }
+        }
 
+        public string FoodCustomizations2
+        {
+            get { return foodCustomizations2; }
+            set
+            {
+                foodCustomizations2 = value;
+                lblCustom3.Content = foodCustomizations2;
+            }
+        }
 
         public FoodItem()
         {
@@ -55,6 +77,13 @@ namespace VerticalPrototype1
 
             foodCustomizations = f.foodCustomizations;
             lblCustom.Content = foodCustomizations;
+
+            foodCustomizations1 = f.foodCustomizations1;
+            lblCustom2.Content = foodCustomizations1;
+
+            foodCustomizations2 = f.foodCustomizations2;
+            lblCustom3.Content = foodCustomizations2;
+
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
@@ -69,5 +98,18 @@ namespace VerticalPrototype1
                 isChecked = true;
             }
         }
+
+        private void customizationsChecker(object sender, RoutedEventArgs e)
+        {
+            if (customIsChecked)
+            {
+                customIsChecked = false;
+            }
+            else
+            {
+                customIsChecked = true;
+            }
+        }
+
     }
 }

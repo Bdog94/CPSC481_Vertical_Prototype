@@ -25,11 +25,17 @@ namespace VerticalPrototype1
         {
             InitializeComponent();
             lblTable.Content = MainWindow.tableNum;
+            //stackPanelCategories.Children.Add(MainWindow.currentOrderInterface);
+            //stkPanelOptions1.Children.Add(MainWindow.currentOrderSelection);
         }
 
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.switchToTableView();
+            SelectTablePopUp s = new SelectTablePopUp();
+            s.Show();
+            
+            //stackPanelCategories.Children.Remove(MainWindow.currentOrderInterface);
+            //stkPanelOptions1.Children.Remove(MainWindow.currentOrderSelection);
         }
 
         private void btnSoupSalad_Click(object sender, RoutedEventArgs e)

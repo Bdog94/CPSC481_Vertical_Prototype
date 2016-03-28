@@ -20,10 +20,16 @@ namespace VerticalPrototype1
     /// </summary>
     public partial class SoupSalads : UserControl
     {
+        public static FoodItem food;
+        public Boolean isAdd = false;
+        public Boolean isRemove = false;
+        public Boolean isSide = false;
+        private int counter = 0;
         public SoupSalads()
         {
             InitializeComponent();
             lblTable.Content = MainWindow.tableNum;
+            food = new FoodItem();
             stackPanelSalad.Children.Add(MainWindow.currentOrderInterface);
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             
@@ -39,17 +45,107 @@ namespace VerticalPrototype1
 
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.switchToTableView();
+            SelectTablePopUp s = new SelectTablePopUp();
+            s.Show();
+            
+        }
+
+        public void foodOrder(RoutedEventArgs e)
+        {
+            food = new FoodItem();
+            Button b = e.Source as Button;
+            food.FoodItemName = b.Content as String;
+            MainWindow.currentOrderInterface.addFoodItem(food);
+            counter = 0;
+        }
+        public void custom(RoutedEventArgs e)
+        {
+            while (counter <= 3){
+                Button b = e.Source as Button;
+                if (counter == 0){
+                    if (isAdd == true)
+                    {
+                        food.FoodCustomizations = "Add: " + b.Content as String;
+                        isAdd = false;
+                    }
+                    else if (isRemove == true)
+                    {
+                        food.FoodCustomizations = "Remove: " + b.Content as String;
+                        isRemove = false;
+                    }
+                    else if (isSide == true)
+                    {
+                        food.FoodCustomizations = "Side: " + b.Content as String;
+                        isSide = false;
+                    }
+                    else
+                    {
+                        food.FoodCustomizations = b.Content as String;
+                    }
+                   
+                   counter++;
+                   break;
+                }
+                else if (counter == 1){
+                    if (isAdd == true)
+                    {
+                        food.FoodCustomizations1 = "Add: " + b.Content as String;
+                        isAdd = false;
+                    }
+                    else if (isRemove == true)
+                    {
+                        food.FoodCustomizations1 = "Remove: " + b.Content as String;
+                        isRemove = false;
+                    }
+                    else if (isSide == true)
+                    {
+                        food.FoodCustomizations1 = "Side: " + b.Content as String;
+                        isSide = false;
+                    }
+                    else
+                    {
+                        food.FoodCustomizations1 = b.Content as String;
+                    }
+                    
+                    counter++;
+                    break;
+                }
+                else if (counter == 2){
+                    if (isAdd == true)
+                    {
+                        food.FoodCustomizations2 = "Add: " + b.Content as String;
+                        isAdd = false;
+                    }
+                    else if (isRemove == true)
+                    {
+                        food.FoodCustomizations2 = "Remove: " + b.Content as String;
+                        isRemove = false;
+                    }
+                    else if (isSide == true)
+                    {
+                        food.FoodCustomizations2 = "Side: " + b.Content as String;
+                        isSide = false;
+                    }
+                    else
+                    {
+                        food.FoodCustomizations2 = b.Content as String;
+                    } 
+                    counter++;
+                    break;
+                }
+                else{
+                    counter=0;
+                    break;
+                }
+            }
+            //Button b = e.Source as Button;
+            //food.FoodCustomizations = b.Content as String;
         }
 
 //Caesar Salad
 
         private void btnSoupSalad_Click(object sender, RoutedEventArgs e)
         {
-            FoodItem f = new FoodItem();
-            f.FoodItemName = "Caesar Salad";
-            f.FoodCustomizations = "Stuff";
-            MainWindow.currentOrderInterface.addFoodItem(f);
             if (caeserDropDown.Visibility == System.Windows.Visibility.Hidden)
             {
                 caeserDropDown.Visibility = System.Windows.Visibility.Visible;
@@ -58,8 +154,9 @@ namespace VerticalPrototype1
             {
                 caeserDropDown.Visibility = System.Windows.Visibility.Hidden;
             }
-            
+            foodOrder(e);
         }
+
 
         private void AllergySelect_Click(object sender, RoutedEventArgs e)
         {
@@ -70,30 +167,47 @@ namespace VerticalPrototype1
         private void GlutenFree_Click(object sender, RoutedEventArgs e)
         {
             Allergies.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void PF_Click(object sender, RoutedEventArgs e)
         {
             Allergies.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void Vegan_Click(object sender, RoutedEventArgs e)
         {
             Allergies.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void Paleo_Click(object sender, RoutedEventArgs e)
         {
             Allergies.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown.Visibility = System.Windows.Visibility.Visible;
         }
+        //actual bacon add button
         private void Baconbtn_Click(object sender, RoutedEventArgs e)
         {
+            isAdd = true;
             AddCaesarBtn.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown.Visibility = System.Windows.Visibility.Visible;
         }
+        //actual remove button
         private void removeMenu_Click(object sender, RoutedEventArgs e)
         {
+            isRemove = true;
             removeCaesarBtn.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown.Visibility = System.Windows.Visibility.Visible;
         }
+
         private void addcaesar_Click(object sender, RoutedEventArgs e)
         {
             AddCaesarBtn.Visibility = System.Windows.Visibility.Visible;
@@ -105,9 +219,13 @@ namespace VerticalPrototype1
             caeserDropDown.Visibility = System.Windows.Visibility.Hidden; 
 
         }
+        //actual dressing button
         private void dressingside_Click(object sender, RoutedEventArgs e)
         {
+            isSide = true;
             sideCaesarBtn.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown.Visibility = System.Windows.Visibility.Visible;
         }
         private void sideCS_Click(object sender, RoutedEventArgs e)
         {
@@ -134,33 +252,50 @@ namespace VerticalPrototype1
             {
                 caeserDropDown_1.Visibility = System.Windows.Visibility.Hidden;
             }
+            foodOrder(e);
         }
 
         private void GlutenFree_Click1(object sender, RoutedEventArgs e)
         {
             Allergies_1.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Visible;
         }
         private void PF_Click1(object sender, RoutedEventArgs e)
         {
             Allergies_1.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void Vegan_Click1(object sender, RoutedEventArgs e)
         {
             Allergies_1.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void Paleo_Click1(object sender, RoutedEventArgs e)
         {
             Allergies_1.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Visible;
         }
+        //add chicken button
         private void chickenHS_Click(object sender, RoutedEventArgs e)
         {
+            isAdd = true;
             AddHS.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Visible;
         }
+        //remove dressing button
         private void dressingHS_Click(object sender, RoutedEventArgs e)
         {
+            isRemove = true;
+            custom(e);
             RemoveHS.Visibility = System.Windows.Visibility.Hidden;
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Visible;
         }
         private void removeHSbtn_Click(object sender, RoutedEventArgs e)
         {
@@ -174,8 +309,11 @@ namespace VerticalPrototype1
         }
         private void dHSside_Click(object sender, RoutedEventArgs e)
         {
-
+            isSide = true;
+            custom(e);
             SideHS.Visibility = System.Windows.Visibility.Hidden;
+            caeserDropDown_1.Visibility = System.Windows.Visibility.Visible;
+
         }
         private void sideHSbtn_Click(object sender, RoutedEventArgs e)
         {
@@ -194,29 +332,38 @@ namespace VerticalPrototype1
             {
                 ClamSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
             }
+            foodOrder(e);
         }
 
         private void GlutenFree_Click2(object sender, RoutedEventArgs e)
         {
             Allergies_2.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            ClamSoupDropDown.Visibility = System.Windows.Visibility.Visible;
 
         }
 
         private void PF_Click2(object sender, RoutedEventArgs e)
         {
             Allergies_2.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            ClamSoupDropDown.Visibility = System.Windows.Visibility.Visible;
             
         }
 
         private void Vegan_Click2(object sender, RoutedEventArgs e)
         {
             Allergies_2.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            ClamSoupDropDown.Visibility = System.Windows.Visibility.Visible;
 
         }
 
         private void Paleo_Click2(object sender, RoutedEventArgs e)
         {
             Allergies_2.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            ClamSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void AllergySelect_Click2(object sender, RoutedEventArgs e)
@@ -238,14 +385,21 @@ namespace VerticalPrototype1
                 sideClamSoup.Visibility = System.Windows.Visibility.Visible;
                 ClamSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
         }
+        //add crackers
         private void crackers_Click(object sender, RoutedEventArgs e)
         {
+            isAdd = true;
             addClamSoup.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            ClamSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         }
-
+        //side garlic bread
         private void garlicBread_Click(object sender, RoutedEventArgs e)
         {
+            isSide = true;
             sideClamSoup.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            ClamSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         } 
 
 
@@ -260,34 +414,44 @@ namespace VerticalPrototype1
             {
                 TomatoSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
             }
+            foodOrder(e);
         }
 
         private void AllergySelect3_Click(object sender, RoutedEventArgs e)
         {
                 Allergies_3.Visibility = System.Windows.Visibility.Visible;
                 TomatoSoupDropDown.Visibility = System.Windows.Visibility.Hidden;
+
         }
 
         private void GlutenFree_Click3(object sender, RoutedEventArgs e)
         {
                 Allergies_3.Visibility = System.Windows.Visibility.Hidden;
+                custom(e);
+                TomatoSoupDropDown.Visibility = System.Windows.Visibility.Visible;
             
         }
 
         private void PF_Click3(object sender, RoutedEventArgs e)
         {
                 Allergies_3.Visibility = System.Windows.Visibility.Hidden;
+                custom(e);
+                TomatoSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         }
         
 
         private void Vegan_Click3(object sender, RoutedEventArgs e)
         {
                 Allergies_3.Visibility = System.Windows.Visibility.Hidden;
+                custom(e);
+                TomatoSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void Paleo_Click3(object sender, RoutedEventArgs e)
         {
             Allergies_3.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            TomatoSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         }
         private void AllergySelect_Click3(object sender, RoutedEventArgs e)
         {
@@ -297,11 +461,17 @@ namespace VerticalPrototype1
 
         private void cts_Click(object sender, RoutedEventArgs e)
         {
+            isAdd = true;
             AddTS.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            TomatoSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         }
         private void gcts_Click(object sender, RoutedEventArgs e)
         {
+            isSide = true;
             RemoveTS.Visibility = System.Windows.Visibility.Hidden;
+            custom(e);
+            TomatoSoupDropDown.Visibility = System.Windows.Visibility.Visible;
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {

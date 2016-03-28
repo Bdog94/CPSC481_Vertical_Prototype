@@ -80,6 +80,12 @@
     <Compile Include="SelectTable.xaml.cs">
       <DependentUpon>SelectTable.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectTablePopUp.xaml.cs">
+      <DependentUpon>SelectTablePopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SendToKitchen.xaml.cs">
+      <DependentUpon>SendToKitchen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SoupSalads.xaml.cs">
       <DependentUpon>SoupSalads.xaml</DependentUpon>
     </Compile>
@@ -140,6 +146,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SelectTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectTablePopUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SendToKitchen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

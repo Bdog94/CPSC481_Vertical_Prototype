@@ -8,6 +8,6 @@
         <Button Content="Delete" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Click="Delete_Button"/>
         <Button Content="Copy" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="87" Click="Button_Click_1"/>
         <Button Content="Add Note" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="62" Click="Button_Click_2"/>
-        <Button Content="Send to &#xD;&#xA;Kitchen&#xD;&#xA;" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="62" Canvas.Left="87"/>
+        <Button Content="Send to &#xD;&#xA;Kitchen&#xD;&#xA;" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="62" Canvas.Left="87" Click="Button_Click_3"/>
     </Canvas>
 </UserControl>

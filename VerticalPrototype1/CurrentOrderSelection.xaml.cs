@@ -46,6 +46,12 @@ namespace VerticalPrototype1
           //  MainWindow.switchToAddNote();
        }
 
+       private void Button_Click_3(object sender, RoutedEventArgs e)
+       {
+           SendToKitchen s = new SendToKitchen();
+           s.Show();
+       }
+
 
     }
 }
