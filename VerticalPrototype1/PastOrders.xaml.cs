@@ -28,13 +28,18 @@ namespace VerticalPrototype1
                 Button btn = new Button();
                 btn.Content = "Test " + i;
                 btn.Tag = i;
-                //btn.Click += new EventHandler(ShowCurrentOrderN);
+                //dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+                btn.Click += new RoutedEventHandler(ShowCurrentOrderN);
                 stackPanel.Children.Add(btn);
             }
         }
 
-        void ShowCurrentOrderN(object sender, EventArgs e)
+        private void ShowCurrentOrderN(object sender, RoutedEventArgs e)
         {
+            Button b = e.Source as Button;
+            CurrentOrder[] array = MainWindow.pastOrders.ToArray();
+            stackPanel1.Children.Add(array[(int) b.Tag]);
+            //stackPanel1.Children.Add(MainWindow.pastOrders.ElementAt<CurrentOrder>(b.Tag));
 
         }
 
