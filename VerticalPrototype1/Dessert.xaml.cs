@@ -39,6 +39,11 @@ namespace VerticalPrototype1
         {
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
+
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelDessert.Children.Remove(MainWindow.currentOrderInterface);
+            //MainWindow.switchToTableView();
+
         }
 
         private void note_Click(object sender, RoutedEventArgs e)

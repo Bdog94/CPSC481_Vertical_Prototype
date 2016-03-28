@@ -24,6 +24,8 @@ namespace VerticalPrototype1
         public MenuCategories()
         {
             InitializeComponent();
+            stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Add(MainWindow.currentOrderInterface);
             lblTable.Content = MainWindow.tableNum;
             //stackPanelCategories.Children.Add(MainWindow.currentOrderInterface);
             //stkPanelOptions1.Children.Add(MainWindow.currentOrderSelection);
@@ -36,45 +38,64 @@ namespace VerticalPrototype1
             
             //stackPanelCategories.Children.Remove(MainWindow.currentOrderInterface);
             //stkPanelOptions1.Children.Remove(MainWindow.currentOrderSelection);
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
+           // MainWindow.switchToTableView();
         }
 
         private void btnSoupSalad_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToSoupSalad();
         }
 
         private void btnNonAlcohol_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToBeverages();
         }
 
         private void btnAlcohol_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToAlcohol();
         }
 
         private void Starters_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToStarters();
         }
 
         private void Meals_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToMeals();
         }
 
         private void dessert_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToDessert();
         }
 
         private void Sides_Click(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToSides();
         }
 
         private void Specials_Click_1(object sender, RoutedEventArgs e)
         {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToKids();
         }
 
@@ -82,6 +103,13 @@ namespace VerticalPrototype1
         {
             MainWindow.window = new MenuCategories();
             MainWindow.switchToAddNote();
+        }
+
+        private void PastOrders(object sender, RoutedEventArgs e)
+        {
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
+            MainWindow.switchToPastOrders();
         }
     }
 }

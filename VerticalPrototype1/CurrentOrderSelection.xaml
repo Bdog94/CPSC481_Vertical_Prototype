@@ -6,8 +6,10 @@
              mc:Ignorable="d" Height="124" Width="173">
     <Canvas HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="174" RenderTransformOrigin="-0.39,0.266" Background="#FFF9F9F9" Margin="0,0,-59,0">
         <Button Content="Delete" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Click="Delete_Button"/>
-        <Button Content="Copy" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="87" Click="Button_Click_1"/>
-        <Button Content="Add Note" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="62" Click="Button_Click_2"/>
-        <Button Content="Send to &#xD;&#xA;Kitchen&#xD;&#xA;" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="62" Canvas.Left="87" Click="Button_Click_3"/>
+        
+        <Button Content="Copy" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="87" Click="Copy"/>
+        <Button Content="Add Note" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="62" Click="Add_Note"/>
+        <Button Content="Send to &#xD;&#xA;Kitchen&#xD;&#xA;" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="62" Canvas.Left="87" Click="SendToKitchen"/>
+
     </Canvas>
 </UserControl>

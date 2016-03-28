@@ -25,31 +25,33 @@ namespace VerticalPrototype1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Delete_Button(object sender, RoutedEventArgs e)
         {
             MainWindow.currentOrderInterface.Delete();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            MainWindow.currentOrderInterface.Copy();
-        }
+       
 
-
-       private void Button_Click_2(object sender, RoutedEventArgs e)
-       {
-          //  MainWindow.switchToAddNote();
-       }
-
-       private void Button_Click_3(object sender, RoutedEventArgs e)
+       private void SendToKitchen(object sender, RoutedEventArgs e)
        {
            SendToKitchen s = new SendToKitchen();
            s.Show();
+           // MainWindow.pastOrders.Push(MainWindow.currentOrderInterface);
+          // MainWindow.currentOrderInterface = new CurrentOrder();
+
+       }
+
+       private void Add_Note(object sender, RoutedEventArgs e)
+       {
+
+       }
+
+
+       private void Copy(object sender, RoutedEventArgs e)
+       {
+           MainWindow.currentOrderInterface.Copy();
+
        }
 
 

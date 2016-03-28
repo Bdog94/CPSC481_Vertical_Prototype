@@ -23,18 +23,28 @@ namespace VerticalPrototype1
         public WineBeer()
         {
             InitializeComponent();
+            stackPanelWineAndBeer.Children.Add(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             lblTable.Content = MainWindow.tableNum;
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
+            stackPanelWineAndBeer.Children.Remove(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             MainWindow.switchToMenuCategoriesView();
         }
 
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)
         {
+
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
+
+            stackPanelWineAndBeer.Children.Remove(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
+            //MainWindow.switchToTableView();
+
         }
 
         private void note_Click(object sender, RoutedEventArgs e)

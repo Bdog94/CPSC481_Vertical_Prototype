@@ -47,6 +47,8 @@ namespace VerticalPrototype1
         {
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
+            stackPanelSalad.Children.Remove(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             
         }
 
@@ -138,8 +140,6 @@ namespace VerticalPrototype1
                     break;
                 }
             }
-            //Button b = e.Source as Button;
-            //food.FoodCustomizations = b.Content as String;
         }
 
 //Caesar Salad

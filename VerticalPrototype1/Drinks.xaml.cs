@@ -37,13 +37,20 @@ namespace VerticalPrototype1
         {
             stackPanelDrinks.Children.Remove(MainWindow.currentOrderInterface);
             stkPanelOptions2.Children.Remove(MainWindow.currentOrderSelection);
+
             MainWindow.switchToMenuCategoriesView();
         }
 
         private void SelectTableButton_Click(object sender, RoutedEventArgs e)
         {
+
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
+
+            stackPanelDrinks.Children.Remove(MainWindow.currentOrderInterface);
+            stkPanelOptions2.Children.Remove(MainWindow.currentOrderSelection);
+           // MainWindow.switchToTableView();
+
         }
 
         private void note_Click(object sender, RoutedEventArgs e)
