@@ -36,6 +36,11 @@ namespace VerticalPrototype1
             currentOrderSelection = new CurrentOrderSelection();
             pastOrders = new Stack<CurrentOrder>();
         }
+        public static void SendToKitchen()
+        {
+            pastOrders.Push(MainWindow.currentOrderInterface);
+            currentOrderInterface = new CurrentOrder();
+        }
 
         public static void switchToTableView()
         {

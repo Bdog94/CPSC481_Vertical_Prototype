@@ -37,9 +37,6 @@ namespace VerticalPrototype1
        {
            SendToKitchen s = new SendToKitchen();
            s.Show();
-           // MainWindow.pastOrders.Push(MainWindow.currentOrderInterface);
-          // MainWindow.currentOrderInterface = new CurrentOrder();
-
        }
 
        private void Add_Note(object sender, RoutedEventArgs e)

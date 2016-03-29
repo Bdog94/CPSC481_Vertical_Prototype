@@ -19,20 +19,24 @@ namespace VerticalPrototype1
     /// </summary>
     public partial class SendToKitchen : Window
     {
+        
         public SendToKitchen()
         {
             InitializeComponent();
         }
 
+        //confirm
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow.SendToKitchen();
             MessageBox.Show("The Order Was Sent to The Kitchen!");
             this.Close();
 
         }
-
+        //cancel
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            MainWindow.SendToKitchen();
             this.Close();
         }
     }
