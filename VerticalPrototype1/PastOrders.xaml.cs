@@ -28,7 +28,6 @@ namespace VerticalPrototype1
                 Button btn = new Button();
                 btn.Content = "Test " + i;
                 btn.Tag = i;
-                //dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
                 btn.Click += new RoutedEventHandler(ShowCurrentOrderN);
                 stackPanel.Children.Add(btn);
             }
@@ -36,6 +35,7 @@ namespace VerticalPrototype1
 
         private void ShowCurrentOrderN(object sender, RoutedEventArgs e)
         {
+            stackPanel1.Children.Clear();
             Button b = e.Source as Button;
             CurrentOrder[] array = MainWindow.pastOrders.ToArray();
             stackPanel1.Children.Add(array[(int) b.Tag]);

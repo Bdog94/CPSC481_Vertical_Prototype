@@ -13,20 +13,16 @@
         <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold"/>
         <Canvas HorizontalAlignment="Left" Height="542" Margin="10,39,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED">
             <ScrollViewer Canvas.Left="-1" Canvas.Top="60" Height="358" Width="175">
-                <StackPanel x:Name="stackPanel"/>
+                <StackPanel x:Name="stackPanelSpecials"/>
 
             </ScrollViewer>
-            <Button Content="Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Left="87" Canvas.Top="418"/>
-            <Button Content="Send to&#xA; Kitchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" RenderTransformOrigin="1.37,2.124" Height="62" Canvas.Left="87" Canvas.Top="480"/>
-            <Button x:Name="note" Content="Add Note" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="480" Click="note_Click"/>
         </Canvas>
         <Label x:Name="lblTable_Copy" Content="" HorizontalAlignment="Left" Margin="122,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontSize="14" FontWeight="Bold"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
         <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,490,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click"/>
         <Label Content="Kid's Menu" HorizontalAlignment="Left" Margin="233,24,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="10,457,0,0" VerticalAlignment="Top" Width="87" FontFamily="Garamond" FontSize="18" Height="62"/>
-
+        <StackPanel x:Name="stkPanelOptions" HorizontalAlignment="Left" Height="124" Margin="10,457,0,0" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.661,0.045"/>
     </Grid>
 </UserControl>
             
