@@ -28,17 +28,18 @@ namespace VerticalPrototype1
         public Drinks()
         {
             InitializeComponent();
+            MainWindow.currentOrderStackPanel = stackPanelDrinks;
+            MainWindow.currentOptionsStackPanel = stkPanelOptions;
             lblTable_Copy.Content = MainWindow.tableNum;
             drinks = new FoodItem();
             stackPanelDrinks.Children.Add(MainWindow.currentOrderInterface);
-            stkPanelOptions2.Children.Add(MainWindow.currentOrderSelection);
+            stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
             stackPanelDrinks.Children.Remove(MainWindow.currentOrderInterface);
-            stkPanelOptions2.Children.Remove(MainWindow.currentOrderSelection);
-
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             MainWindow.switchToMenuCategoriesView();
         }
 
@@ -47,9 +48,6 @@ namespace VerticalPrototype1
 
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
-
-            stackPanelDrinks.Children.Remove(MainWindow.currentOrderInterface);
-            stkPanelOptions2.Children.Remove(MainWindow.currentOrderSelection);
            // MainWindow.switchToTableView();
 
         }
@@ -320,6 +318,16 @@ namespace VerticalPrototype1
             food.Note.Visibility = System.Windows.Visibility.Visible;
             food.Note.Text = "Note: " + MainWindow.Note;
             MainWindow.currentOrderInterface.addFoodItem(food);
+        }
+
+
+     private void Past_Orders(object sender, RoutedEventArgs e)
+     {
+         stkPanelOptions.Children.Clear();
+         stackPanelDrinks.Children.Clear();
+         MainWindow.switchToPastOrders();
+     }
+
 
         }
         private void orderReady(object sender, TouchEventArgs e)
@@ -336,5 +344,6 @@ namespace VerticalPrototype1
             }
         }
 
+
     }
-}
+

@@ -47,5 +47,14 @@ namespace VerticalPrototype1
             MainWindow.window = new Specials();
             MainWindow.switchToAddNote();
         }
+
+        private void Past_Orders(object sender, RoutedEventArgs e)
+        {
+            stkPanelOptions.Children.Clear();
+            stackPanelSpecials.Children.Clear();
+            MainWindow.switchToPastOrders();
+        }
+
+        
     }
 }
