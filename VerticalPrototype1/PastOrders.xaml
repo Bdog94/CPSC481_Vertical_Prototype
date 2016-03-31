@@ -16,5 +16,7 @@
 
         </ScrollViewer>
         <StackPanel Height="100" Canvas.Top="-1" Width="157"/>
+        <Button Content="Delete" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Click="Delete_Button" Canvas.Left="1" Canvas.Top="467"/>
+        <Button Content="Add Note" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="467" Click="Add_Note" Canvas.Left="88"/>
     </Canvas>
 </UserControl>

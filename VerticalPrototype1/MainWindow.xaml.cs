@@ -125,9 +125,9 @@ namespace VerticalPrototype1
         }
 
 
-        internal static void clearStackPanel()
-        {
-            throw new NotImplementedException();
-        }
+       public static void clearStackPanel()
+         {
+            currentOrderStackPanel.Children.Clear();
+         }
     }
 }
