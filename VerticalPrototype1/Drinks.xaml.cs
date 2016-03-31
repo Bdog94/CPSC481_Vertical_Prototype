@@ -24,7 +24,7 @@ namespace VerticalPrototype1
         private Boolean isLight = false;
         public int counter = 0;
         public static FoodItem drinks;
-        public int x  = 0;
+        public int x = 0;
         public Drinks()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace VerticalPrototype1
 
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
-           // MainWindow.switchToTableView();
+            // MainWindow.switchToTableView();
 
         }
 
@@ -83,7 +83,7 @@ namespace VerticalPrototype1
                         drinks.FoodCustomizations = "Light: " + b.Content as String;
                         isLight = false;
                     }
-                    
+
                     counter++;
                     break;
                 }
@@ -130,7 +130,7 @@ namespace VerticalPrototype1
 
 
 
-//appleJuice
+        //appleJuice
         private void appleJuice_Click(object sender, RoutedEventArgs e)
         {
             if (appleJuiceDD.Visibility == System.Windows.Visibility.Hidden)
@@ -172,7 +172,7 @@ namespace VerticalPrototype1
             appleJuiceDD.Visibility = System.Windows.Visibility.Visible;
         }
 
-//iced tea
+        //iced tea
         private void icedTea_Click(object sender, RoutedEventArgs e)
         {
             if (icedTeaDD.Visibility == System.Windows.Visibility.Hidden)
@@ -213,7 +213,7 @@ namespace VerticalPrototype1
             itLightDD.Visibility = System.Windows.Visibility.Hidden;
             icedTeaDD.Visibility = System.Windows.Visibility.Visible;
         }
-//ginger ale
+        //ginger ale
         private void gingerAle_Click(object sender, RoutedEventArgs e)
         {
             if (gingerAleDD.Visibility == System.Windows.Visibility.Hidden)
@@ -253,7 +253,7 @@ namespace VerticalPrototype1
             gaExtraDD.Visibility = System.Windows.Visibility.Hidden;
             gingerAleDD.Visibility = System.Windows.Visibility.Visible;
         }
-//coca cola
+        //coca cola
         private void cocaCola_Click(object sender, RoutedEventArgs e)
         {
             if (cocaColaDD.Visibility == System.Windows.Visibility.Hidden)
@@ -321,15 +321,15 @@ namespace VerticalPrototype1
         }
 
 
-     private void Past_Orders(object sender, RoutedEventArgs e)
-     {
-         stkPanelOptions.Children.Clear();
-         stackPanelDrinks.Children.Clear();
-         MainWindow.switchToPastOrders();
-     }
-
-
+        private void Past_Orders(object sender, RoutedEventArgs e)
+        {
+            stkPanelOptions.Children.Clear();
+            stackPanelDrinks.Children.Clear();
+            MainWindow.switchToPastOrders();
         }
+
+
+
         private void orderReady(object sender, TouchEventArgs e)
         {
             if (x == 0)
@@ -346,4 +346,5 @@ namespace VerticalPrototype1
 
 
     }
+}
 

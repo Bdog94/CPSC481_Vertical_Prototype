@@ -33,8 +33,9 @@ namespace VerticalPrototype1
             MessageBox.Show("The Order Was Sent to The Kitchen!");
             MainWindow.currentOrderInterface = new CurrentOrder();
             MainWindow.clearStackPanel();
-            MainWindow.currentOrderStackPanel.Children.Add(MainWindow.currentOrderInterface);
-            isCleared = true;
+            MainWindow.ClearCurrentOptionsStackPanel();
+            MainWindow.switchToTableView();
+            isCleared= true;
             this.Close();
 
         }
