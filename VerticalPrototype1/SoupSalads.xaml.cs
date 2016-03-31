@@ -28,6 +28,7 @@ namespace VerticalPrototype1
         public SoupSalads()
         {
             InitializeComponent();
+            MainWindow.currentOrderStackPanel = stackPanelSalad;
             lblTable.Content = MainWindow.tableNum;
             food = new FoodItem();
             stackPanelSalad.Children.Add(MainWindow.currentOrderInterface);
@@ -47,7 +48,7 @@ namespace VerticalPrototype1
         {
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
-            stackPanelSalad.Children.Remove(MainWindow.currentOrderInterface);
+            stackPanelSalad.Children.Clear();
             stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             
         }

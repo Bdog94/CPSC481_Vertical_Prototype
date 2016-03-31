@@ -11,10 +11,8 @@
         <StackPanel x:Name="stackPanel" Height="536" Canvas.Left="301" Canvas.Top="44" Width="189">
             <StackPanel HorizontalAlignment="Left" Height="6" Margin="10,0,0,0" Width="41"/>
         </StackPanel>
-        <ScrollViewer x:Name="svFoodItems" Height="358" Width="175" Canvas.Top="104" >
-            <StackPanel x:Name="stackPanel1" RenderTransformOrigin="0.532,0.661"/>
-
-        </ScrollViewer>
-        <StackPanel Height="100" Canvas.Top="-1" Width="157"/>
+        <StackPanel x:Name="stackPanel1" RenderTransformOrigin="0.532,0.661" Height="283" Width="174" Canvas.Left="10" Canvas.Top="68"/>
+        <Button Content="Delete" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Click="Delete_Button" Canvas.Left="10" Canvas.Top="351"/>
+        <Button Content="Add Note" Width="87" FontFamily="Garamond" FontSize="18" Height="62" Canvas.Top="351" Click="Add_Note" Canvas.Left="97"/>
     </Canvas>
 </UserControl>

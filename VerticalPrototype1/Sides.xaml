@@ -11,7 +11,7 @@
         <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="123,33,0,0" VerticalAlignment="Top" Width="82"/>
         <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold"/>
         <Canvas HorizontalAlignment="Left" Height="487" VerticalAlignment="Top" Width="174" Background="#FFF0EDED" Canvas.Left="10" Canvas.Top="94">
-            <StackPanel x:Name="stackPanelSides" Width="165"/>
+            <StackPanel x:Name="stackPanelSides" Width="174"/>
         </Canvas>
         <Label x:Name="lblTable_Copy" Content="" HorizontalAlignment="Left" Margin="123,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontSize="14" FontWeight="Bold"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>

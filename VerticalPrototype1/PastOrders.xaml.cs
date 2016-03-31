@@ -20,10 +20,11 @@ namespace VerticalPrototype1
     /// </summary>
     public partial class PastOrders : UserControl
     {
+        CurrentOrder currentOrderBeingShown;
         public PastOrders()
         {
             InitializeComponent();
-            for (int i = 0; i < MainWindow.pastOrders.Count; i++)
+            for (int i = MainWindow.pastOrders.Count -1; i >= 0; i--)
             {
                 Button btn = new Button();
                 btn.Content = "Test " + i;
@@ -33,19 +34,49 @@ namespace VerticalPrototype1
             }
         }
 
+        private void Delete_Button(object sender, RoutedEventArgs e)
+        {
+            currentOrderBeingShown.Delete();
+        }
+
+        private void Copy(object sender, RoutedEventArgs e)
+        {
+            currentOrderBeingShown.Copy();
+        }
+
+        private void SendToKitchen(object sender, RoutedEventArgs e)
+        {
+            SendToKitchen s = new SendToKitchen();
+            s.Show();
+
+        }
+
+        private void Add_Note(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
         private void ShowCurrentOrderN(object sender, RoutedEventArgs e)
         {
             stackPanel1.Children.Clear();
             Button b = e.Source as Button;
             CurrentOrder[] array = MainWindow.pastOrders.ToArray();
             stackPanel1.Children.Add(array[(int) b.Tag]);
+            currentOrderBeingShown = array[(int) b.Tag];
             //stackPanel1.Children.Add(MainWindow.pastOrders.ElementAt<CurrentOrder>(b.Tag));
 
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
+            stackPanel1.Children.Clear();
             MainWindow.switchToMenuCategoriesView();
+        }
+
+        private void Revise(object sender, RoutedEventArgs e)
+        {
+            MainWindow.currentOrderInterface = currentOrderBeingShown;
         }
     }
 }

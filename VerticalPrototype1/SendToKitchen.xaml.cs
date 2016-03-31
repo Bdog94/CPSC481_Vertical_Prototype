@@ -30,6 +30,9 @@ namespace VerticalPrototype1
         {
             MainWindow.SendToKitchen();
             MessageBox.Show("The Order Was Sent to The Kitchen!");
+            MainWindow.currentOrderInterface = new CurrentOrder();
+            MainWindow.clearStackPanel();
+            MainWindow.currentOrderStackPanel.Children.Add(MainWindow.currentOrderInterface);
             this.Close();
 
         }

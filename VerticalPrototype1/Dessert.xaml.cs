@@ -24,6 +24,7 @@ namespace VerticalPrototype1
         public Dessert()
         {
             InitializeComponent();
+            MainWindow.currentOrderStackPanel = stackPanelDessert;
             lblTable_Copy.Content = MainWindow.tableNum;
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             stackPanelDessert.Children.Add(MainWindow.currentOrderInterface);

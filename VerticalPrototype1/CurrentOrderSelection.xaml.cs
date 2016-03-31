@@ -23,6 +23,7 @@ namespace VerticalPrototype1
         public CurrentOrderSelection()
         {
             InitializeComponent();
+            
         }
 
 
@@ -37,6 +38,7 @@ namespace VerticalPrototype1
        {
            SendToKitchen s = new SendToKitchen();
            s.Show();
+
        }
 
        private void Add_Note(object sender, RoutedEventArgs e)

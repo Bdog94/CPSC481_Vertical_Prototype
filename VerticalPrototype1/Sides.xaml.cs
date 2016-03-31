@@ -23,6 +23,7 @@ namespace VerticalPrototype1
         public Sides()
         {
             InitializeComponent();
+            MainWindow.currentOrderStackPanel = stackPanelSides;
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             stackPanelSides.Children.Add(MainWindow.currentOrderInterface);
             lblTable_Copy.Content = MainWindow.tableNum;

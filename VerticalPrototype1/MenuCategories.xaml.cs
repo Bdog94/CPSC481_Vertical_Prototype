@@ -24,6 +24,7 @@ namespace VerticalPrototype1
         public MenuCategories()
         {
             InitializeComponent();
+            MainWindow.currentOrderStackPanel = stackPanelCatag;
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             stackPanelCatag.Children.Add(MainWindow.currentOrderInterface);
             lblTable.Content = MainWindow.tableNum;

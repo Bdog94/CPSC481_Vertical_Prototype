@@ -27,6 +27,7 @@ namespace VerticalPrototype1
         public Drinks()
         {
             InitializeComponent();
+            MainWindow.currentOrderStackPanel = stackPanelDrinks;
             lblTable_Copy.Content = MainWindow.tableNum;
             drinks = new FoodItem();
             stackPanelDrinks.Children.Add(MainWindow.currentOrderInterface);
