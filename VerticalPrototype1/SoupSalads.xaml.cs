@@ -49,9 +49,12 @@ namespace VerticalPrototype1
         {
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
-            //stackPanelSalad.Children.Clear();
-            //stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             
+        }
+
+        public void clear()
+        {
+            stackPanelSalad.Children.Clear();
         }
 
         public void foodOrder(RoutedEventArgs e)
@@ -512,6 +515,16 @@ namespace VerticalPrototype1
             stkPanelOptions.Children.Clear();
             stackPanelSalad.Children.Clear();
             MainWindow.switchToPastOrders();
+        }
+
+        private void AddNote(object sender, KeyEventArgs e)
+        {
+            food = new FoodItem();
+            food.Note.Visibility = System.Windows.Visibility.Visible;
+            food.Note.Text = "Note: " + MainWindow.Note;
+            MainWindow.currentOrderInterface.addFoodItem(food);
+            counter = 0;
+
         }
 
 

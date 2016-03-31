@@ -15,31 +15,32 @@ using System.Windows.Shapes;
 namespace VerticalPrototype1
 {
     /// <summary>
-    /// Interaction logic for SendToKitchen.xaml
+    /// Interaction logic for AddNoteWindow.xaml
     /// </summary>
-    public partial class SendToKitchen : Window
+    public partial class AddNoteWindow : Window
     {
-        public Boolean isCleared;
-        public SendToKitchen()
+        public AddNoteWindow()
         {
             InitializeComponent();
-            isCleared = false;
         }
 
-        //confirm
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.SendToKitchen();
-            MessageBox.Show("The Order Was Sent to The Kitchen!");
-            isCleared = true;
             this.Close();
+        }
 
-        }
-        //cancel
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.SendToKitchen();
-            this.Close();
+            Note.Clear();
         }
+
+        private void AddToitem_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Note = Note.Text;
+            MainWindow.noteAdded = true;
+            this.Close();
+        } 
+
+
     }
 }

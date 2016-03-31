@@ -28,6 +28,8 @@ namespace VerticalPrototype1
         public static CurrentOrderSelection currentOrderSelection;
         public static Stack<CurrentOrder> pastOrders;
         public static Object window;
+        public static String Note; 
+        public static Boolean noteAdded;
         public MainWindow()
         {
             m = this;
@@ -37,12 +39,6 @@ namespace VerticalPrototype1
             currentOrderInterface = new CurrentOrder();
             currentOrderSelection = new CurrentOrderSelection();
             pastOrders = new Stack<CurrentOrder>();
-            currentOrderStackPanel = new StackPanel();
-        }
-
-        public static void clearStackPanel()
-        {
-            currentOrderStackPanel.Children.Clear();
         }
 
         public static void ClearCurrentOptionsStackPanel()
@@ -114,8 +110,8 @@ namespace VerticalPrototype1
         }
         public static void switchToAddNote()
         {
-            AddNote n = new AddNote();
-            m.switchTo(n);
+            AddNoteWindow n = new AddNoteWindow();
+           // m.switchTo(n);
         }
         public static void switchToPastOrders()
         {
@@ -128,10 +124,10 @@ namespace VerticalPrototype1
             m.switchTo((UserControl)window);
         }
 
-        public static void clearAllStackPanels()
-        {
-            
-        }
 
+        internal static void clearStackPanel()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -23,7 +23,6 @@ namespace VerticalPrototype1
         public WineBeer()
         {
             InitializeComponent();
-            MainWindow.currentOrderStackPanel = stackPanelWineAndBeer;
             stackPanelWineAndBeer.Children.Add(MainWindow.currentOrderInterface);
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             lblTable.Content = MainWindow.tableNum;

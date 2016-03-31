@@ -109,5 +109,14 @@ namespace VerticalPrototype1
             stackPanelCatag.Children.Clear();
             MainWindow.switchToPastOrders();
         }
+
+        private void addNote(object sender, KeyEventArgs e)
+        {
+            FoodItem food = new FoodItem();
+            food.Note.Visibility = System.Windows.Visibility.Visible;
+            food.Note.Text = "Note: " + MainWindow.Note;
+            MainWindow.currentOrderInterface.addFoodItem(food);
+           
+        }
     }
 }
