@@ -80,6 +80,7 @@ namespace VerticalPrototype1
 
         private void dessert_Click(object sender, RoutedEventArgs e)
         {
+            
             stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
             MainWindow.switchToDessert();
@@ -109,7 +110,7 @@ namespace VerticalPrototype1
         {
 
             stkPanelOptions.Children.Clear();
-            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
+            stackPanelCatag.Children.Clear();
             MainWindow.switchToPastOrders();
         }
     }

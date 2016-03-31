@@ -23,11 +23,15 @@ namespace VerticalPrototype1
         public Starters()
         {
             InitializeComponent();
+            stackPanelStarters.Children.Add(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             lblTable_Copy.Content = MainWindow.tableNum;
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
+            stackPanelStarters.Children.Remove(MainWindow.currentOrderInterface);
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             MainWindow.switchToMenuCategoriesView();
         }
 

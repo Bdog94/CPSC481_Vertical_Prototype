@@ -10,7 +10,6 @@
 
         <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,530,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click"/>
         <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="123,33,0,0" VerticalAlignment="Top" Width="82"/>
-        <Label Content="Table Number:" HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
         <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold"/>
         <Menu x:Name="cocaColaDD" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="extraCC" Content="Extra" Height="27" Width="95" Background="#FFEAD2AC" BorderThickness="0" FontFamily="Garamond" FontSize="16" Click="extraCC_Click"/>
@@ -18,13 +17,10 @@
         </Menu>
 
 
-        <Canvas HorizontalAlignment="Left" Height="542" Margin="10,39,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED">
-
-            <ScrollViewer x:Name="scroller" Canvas.Left="-1" Canvas.Top="60" Height="358" Width="175">
-                <StackPanel x:Name="stackPanelDrinks"/>
-            </ScrollViewer>
+        <Canvas HorizontalAlignment="Left" Height="487" Margin="10,94,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED">
+            <StackPanel x:Name="stackPanelDrinks"/>
         </Canvas>
-        
+
         <Label x:Name="lblTable_Copy" Content="" HorizontalAlignment="Left" Margin="122,43,0,0" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontSize="14" FontWeight="Bold"/>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
