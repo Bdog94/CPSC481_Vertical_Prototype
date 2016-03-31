@@ -8,7 +8,7 @@
         <Button x:Name="btnSoupSalad" Content="Pinot Noir" HorizontalAlignment="Left" Margin="202,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" Height="75" FontSize="24" FontFamily="Garamond"/>
         <Button Content="Cake&#xD;&#xA;Wine" HorizontalAlignment="Left" Margin="338,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond"/>
         <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,530,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click"/>
-        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold"/>
+        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="Past_Orders"/>
         <Canvas HorizontalAlignment="Left" Height="481" Margin="10,100,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED">
             <StackPanel x:Name="stackPanelWineAndBeer"/>
             <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontWeight="Bold" Canvas.Left="112" RenderTransformOrigin="0.492,0.153" Height="25" Canvas.Top="-54"/>

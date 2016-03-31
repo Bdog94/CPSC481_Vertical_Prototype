@@ -24,6 +24,7 @@ namespace VerticalPrototype1
         public MenuCategories()
         {
             InitializeComponent();
+            MainWindow.currentOptionsStackPanel = stkPanelOptions;
             MainWindow.currentOrderStackPanel = stackPanelCatag;
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             stackPanelCatag.Children.Add(MainWindow.currentOrderInterface);
@@ -36,12 +37,6 @@ namespace VerticalPrototype1
         {
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
-            
-            //stackPanelCategories.Children.Remove(MainWindow.currentOrderInterface);
-            //stkPanelOptions1.Children.Remove(MainWindow.currentOrderSelection);
-            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
-            stackPanelCatag.Children.Remove(MainWindow.currentOrderInterface);
-           // MainWindow.switchToTableView();
         }
 
         private void btnSoupSalad_Click(object sender, RoutedEventArgs e)

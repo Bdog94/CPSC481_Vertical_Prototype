@@ -32,6 +32,9 @@ namespace VerticalPrototype1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            MainWindow.clearStackPanel();
+            MainWindow.ClearCurrentOptionsStackPanel();
+            MainWindow.currentOrderInterface = new CurrentOrder();
             //reset order
             MainWindow.switchToTableView();
         }

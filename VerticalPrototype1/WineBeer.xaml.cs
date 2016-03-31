@@ -53,5 +53,12 @@ namespace VerticalPrototype1
             MainWindow.window = new WineBeer();
             MainWindow.switchToAddNote();
         }
+
+        private void Past_Orders(object sender, RoutedEventArgs e)
+        {
+            stkPanelOptions.Children.Clear();
+            stackPanelWineAndBeer.Children.Clear();
+            MainWindow.switchToPastOrders();
+        }
     }
 }

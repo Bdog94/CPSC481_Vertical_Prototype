@@ -53,5 +53,12 @@ namespace VerticalPrototype1
             MainWindow.switchToAddNote();
 
         }
+
+        private void Past_Orders(object sender, RoutedEventArgs e)
+        {
+            stkPanelOptions.Children.Clear();
+            stackPanelDessert.Children.Clear();
+            MainWindow.switchToPastOrders();
+        }
     }
 }

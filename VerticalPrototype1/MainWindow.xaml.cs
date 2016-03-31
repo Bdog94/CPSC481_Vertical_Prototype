@@ -23,6 +23,7 @@ namespace VerticalPrototype1
         public static String tableNum;
         static MainWindow m;
         public static StackPanel currentOrderStackPanel;
+        public static StackPanel currentOptionsStackPanel;
         public static CurrentOrder currentOrderInterface;
         public static CurrentOrderSelection currentOrderSelection;
         public static Stack<CurrentOrder> pastOrders;
@@ -42,6 +43,11 @@ namespace VerticalPrototype1
         public static void clearStackPanel()
         {
             currentOrderStackPanel.Children.Clear();
+        }
+
+        public static void ClearCurrentOptionsStackPanel()
+        {
+            currentOptionsStackPanel.Children.Clear();
         }
         public static void SendToKitchen()
         {

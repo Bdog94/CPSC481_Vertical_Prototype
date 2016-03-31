@@ -10,7 +10,7 @@
 
         <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,530,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click"/>
         <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" Margin="123,33,0,0" VerticalAlignment="Top" Width="82"/>
-        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold"/>
+        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="Past_Orders"/>
         <Menu x:Name="cocaColaDD" HorizontalAlignment="Left" Height="116" Margin="202,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="extraCC" Content="Extra" Height="27" Width="95" Background="#FFEAD2AC" BorderThickness="0" FontFamily="Garamond" FontSize="16" Click="extraCC_Click"/>
             <Button x:Name="lightCC" Content="Light" Height="27" Width="95" Background="#FFEAD2AC" BorderThickness="0" FontFamily="Garamond" FontSize="16" Click="lightCC_Click"/>
@@ -26,7 +26,7 @@
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
         <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,490,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click"/>
         <Label Content="Non-Alcoholic&#xD;&#xA;    Beverages" HorizontalAlignment="Left" Margin="214,7,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
-        <StackPanel x:Name="stkPanelOptions2" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.661,0.045" Canvas.Left="10" Canvas.Top="457" Margin="10,457,0,0"/>
+        <StackPanel x:Name="stkPanelOptions" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.661,0.045" Canvas.Left="10" Canvas.Top="457" Margin="10,457,0,0"/>
         <Menu x:Name="gingerAleDD" HorizontalAlignment="Left" Height="116" Margin="338,169,0,0" VerticalAlignment="Top" Width="110" Background="#FFEAD2AC" Visibility="Hidden">
             <Button x:Name="extraGA" Content="Extra" Height="27" Width="95" Background="#FFEAD2AC" BorderThickness="0" FontFamily="Garamond" FontSize="16" Click="extraGA_Click"/>
             <Button x:Name="lightGA" Content="Light" Height="27" Width="95" Background="#FFEAD2AC" BorderThickness="0" FontFamily="Garamond" FontSize="16" Click="lightGA_Click"/>

@@ -28,16 +28,17 @@ namespace VerticalPrototype1
         {
             InitializeComponent();
             MainWindow.currentOrderStackPanel = stackPanelDrinks;
+            MainWindow.currentOptionsStackPanel = stkPanelOptions;
             lblTable_Copy.Content = MainWindow.tableNum;
             drinks = new FoodItem();
             stackPanelDrinks.Children.Add(MainWindow.currentOrderInterface);
-            stkPanelOptions2.Children.Add(MainWindow.currentOrderSelection);
+            stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
             stackPanelDrinks.Children.Remove(MainWindow.currentOrderInterface);
-            stkPanelOptions2.Children.Remove(MainWindow.currentOrderSelection);
+            stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
 
             MainWindow.switchToMenuCategoriesView();
         }
@@ -48,8 +49,6 @@ namespace VerticalPrototype1
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
 
-            stackPanelDrinks.Children.Remove(MainWindow.currentOrderInterface);
-            stkPanelOptions2.Children.Remove(MainWindow.currentOrderSelection);
            // MainWindow.switchToTableView();
 
         }
@@ -314,6 +313,13 @@ namespace VerticalPrototype1
             itExtraDD.Visibility = System.Windows.Visibility.Hidden;
         }
 
+
+     private void Past_Orders(object sender, RoutedEventArgs e)
+     {
+         stkPanelOptions.Children.Clear();
+         stackPanelDrinks.Children.Clear();
+         MainWindow.switchToPastOrders();
+     }
 
 
     }
