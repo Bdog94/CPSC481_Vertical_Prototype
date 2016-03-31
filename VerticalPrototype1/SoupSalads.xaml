@@ -6,7 +6,7 @@
         <Storyboard x:Key="OnContextMenuClosing1"/>
         <Storyboard x:Key="OnClick1"/>
     </UserControl.Resources>
-    <Grid Background="#FF9CAFB7" MouseWheel="dropdownMenuUp" KeyUp="AddNote">
+    <Grid Background="#FF9CAFB7" MouseWheel="dropdownMenuUp" KeyUp="AddNote" TouchEnter="orderReady">
         <Grid.RowDefinitions>
             <RowDefinition Height="373*"/>
             <RowDefinition Height="317*"/>

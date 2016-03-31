@@ -25,6 +25,8 @@ namespace VerticalPrototype1
         public Boolean isRemove = false;
         public Boolean isSide = false;
         private int counter = 0;
+        public int x = 0;
+        public int caesar = 4;
         public SoupSalads()
         {
             InitializeComponent();
@@ -159,7 +161,25 @@ namespace VerticalPrototype1
             {
                 caeserDropDown.Visibility = System.Windows.Visibility.Hidden;
             }
+            caesar = caesar - 1;
+            if (caesar == 3)
+            {
+                MessageBox.Show("There are only 3 servings left of Caesar Salad. More will be available in 15 minutes.");
+            }
+            if (caesar == 2)
+            {
+                MessageBox.Show("There are only 2 servings left of Caesar Salad. More will be available in 15 minutes.");
+            }
+            if (caesar == 1)
+            {
+                MessageBox.Show("There are only 1 servings left of Caesar Salad. More will be available in 15 minutes.");
+            }
+            if (caesar == 0)
+            {
+                MessageBox.Show("There are only 0 servings left of Caesar Salad. More will be available in 15 minutes.");
+            }
             foodOrder(e);
+
         }
 
 
@@ -520,28 +540,21 @@ namespace VerticalPrototype1
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private void orderReady(object sender, TouchEventArgs e)
+        {
+            if (x == 0)
+            {
+                MessageBox.Show("Order for Table 2 ready.");
+                x = 1;
+            }
+            if (x == 1)
+            {
+                MessageBox.Show("Order for Table 5 ready.");
+                x = 0;
+            }
+           
+           
+        }
+    
     }
 }

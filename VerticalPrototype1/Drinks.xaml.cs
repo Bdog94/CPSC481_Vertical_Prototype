@@ -24,6 +24,7 @@ namespace VerticalPrototype1
         private Boolean isLight = false;
         public int counter = 0;
         public static FoodItem drinks;
+        public int x  = 0;
         public Drinks()
         {
             InitializeComponent();
@@ -320,6 +321,19 @@ namespace VerticalPrototype1
             food.Note.Text = "Note: " + MainWindow.Note;
             MainWindow.currentOrderInterface.addFoodItem(food);
 
+        }
+        private void orderReady(object sender, TouchEventArgs e)
+        {
+            if (x == 0)
+            {
+                MessageBox.Show("Order for Table 2 ready.");
+                x = 1;
+            }
+            if (x == 1)
+            {
+                MessageBox.Show("Order for Table 5 ready.");
+                x = 0;
+            }
         }
 
     }

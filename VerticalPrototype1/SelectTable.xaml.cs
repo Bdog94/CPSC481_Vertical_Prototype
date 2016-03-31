@@ -20,6 +20,7 @@ namespace VerticalPrototype1
     /// </summary>
     public partial class SelectTable : UserControl
     {
+        public int x = 0;
         public SelectTable()
         {
             InitializeComponent();
@@ -30,6 +31,22 @@ namespace VerticalPrototype1
             Button b = e.Source as Button;
             MainWindow.tableNum = b.Content as String;
             MainWindow.switchToMenuCategoriesView();
+        }
+
+        private void orderReady(object sender, TouchEventArgs e)
+        {
+            if (x == 0)
+            {
+                MessageBox.Show("Order for Table 2 ready.");
+                x = 1;
+            }
+            if (x == 1)
+            {
+                MessageBox.Show("Order for Table 5 ready.");
+                x = 0;
+            }
+
+
         }
     }
 }
