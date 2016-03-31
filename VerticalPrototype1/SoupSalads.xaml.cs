@@ -28,7 +28,6 @@ namespace VerticalPrototype1
         public SoupSalads()
         {
             InitializeComponent();
-            MainWindow.currentOrderStackPanel = stackPanelSalad;
             lblTable.Content = MainWindow.tableNum;
             food = new FoodItem();
             stackPanelSalad.Children.Add(MainWindow.currentOrderInterface);
@@ -48,9 +47,14 @@ namespace VerticalPrototype1
         {
             SelectTablePopUp s = new SelectTablePopUp();
             s.Show();
-            stackPanelSalad.Children.Clear();
+            stackPanelSalad.Children.Remove(MainWindow.currentOrderInterface);
             stkPanelOptions.Children.Remove(MainWindow.currentOrderSelection);
             
+        }
+
+        public void clear()
+        {
+            stackPanelSalad.Children.Clear();
         }
 
         public void foodOrder(RoutedEventArgs e)
@@ -504,6 +508,15 @@ namespace VerticalPrototype1
         {
             MainWindow.window = new SoupSalads();
             MainWindow.switchToAddNote();
+        }
+
+        private void AddNote(object sender, KeyEventArgs e)
+        {
+            food = new FoodItem();
+            food.Note.Visibility = System.Windows.Visibility.Visible;
+            food.Note.Text = "Note: " + MainWindow.Note;
+            MainWindow.currentOrderInterface.addFoodItem(food);
+            counter = 0;
         }
 
 

@@ -24,7 +24,6 @@ namespace VerticalPrototype1
         public MenuCategories()
         {
             InitializeComponent();
-            MainWindow.currentOrderStackPanel = stackPanelCatag;
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             stackPanelCatag.Children.Add(MainWindow.currentOrderInterface);
             lblTable.Content = MainWindow.tableNum;
@@ -113,6 +112,15 @@ namespace VerticalPrototype1
             stkPanelOptions.Children.Clear();
             stackPanelCatag.Children.Clear();
             MainWindow.switchToPastOrders();
+        }
+
+        private void addNote(object sender, KeyEventArgs e)
+        {
+            FoodItem food = new FoodItem();
+            food.Note.Visibility = System.Windows.Visibility.Visible;
+            food.Note.Text = "Note: " + MainWindow.Note;
+            MainWindow.currentOrderInterface.addFoodItem(food);
+           
         }
     }
 }

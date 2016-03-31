@@ -23,7 +23,6 @@ namespace VerticalPrototype1
         public Specials()
         {
             InitializeComponent();
-            MainWindow.currentOrderStackPanel = stackPanelSpecials;
             stackPanelSpecials.Children.Add(MainWindow.currentOrderInterface);
             stkPanelOptions.Children.Add(MainWindow.currentOrderSelection);
             lblTable_Copy.Content = MainWindow.tableNum;

@@ -27,7 +27,6 @@ namespace VerticalPrototype1
         public Drinks()
         {
             InitializeComponent();
-            MainWindow.currentOrderStackPanel = stackPanelDrinks;
             lblTable_Copy.Content = MainWindow.tableNum;
             drinks = new FoodItem();
             stackPanelDrinks.Children.Add(MainWindow.currentOrderInterface);
@@ -314,7 +313,14 @@ namespace VerticalPrototype1
             itExtraDD.Visibility = System.Windows.Visibility.Hidden;
         }
 
+        private void addNote(object sender, KeyEventArgs e)
+        {
+            FoodItem food = new FoodItem();
+            food.Note.Visibility = System.Windows.Visibility.Visible;
+            food.Note.Text = "Note: " + MainWindow.Note;
+            MainWindow.currentOrderInterface.addFoodItem(food);
 
+        }
 
     }
 }

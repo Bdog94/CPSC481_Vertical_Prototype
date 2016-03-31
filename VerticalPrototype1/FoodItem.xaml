@@ -12,6 +12,7 @@
             <Label x:Name="lblCustom2" Content="" Canvas.Left="10" Canvas.Top="67" Width="115" Height="24" RenderTransformOrigin="0.096,-0.4" FontFamily="Garamond"/>
             <Label x:Name="lblCustom3" Content="" Canvas.Left="10" Canvas.Top="91" Width="115" Height="25" RenderTransformOrigin="0.096,-0.4" FontFamily="Garamond"/>
         </Canvas>
+        <TextBox x:Name="Note" HorizontalAlignment="Left" Height="118" Margin="0,18,0,-136" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Garamond" FontSize="12" Visibility="Hidden" BorderThickness="0" Background="#FFF9F9F9"/>
 
     </Grid>
 </UserControl>
