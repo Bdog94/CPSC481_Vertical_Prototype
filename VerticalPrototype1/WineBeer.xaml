@@ -2,20 +2,20 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Height="700" Width="500">
-    <Grid Background="#FFC5B3C3">
-        <Button Content="Corona" HorizontalAlignment="Left" Margin="202,94,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24"/>
-        <Button Content="Steam&#xD;&#xA;Whistle" HorizontalAlignment="Left" Margin="338,94,0,0" VerticalAlignment="Top" Width="110" IsEnabled="True" Height="75" FontFamily="Garamond" FontSize="24" />
-        <Button x:Name="btnSoupSalad" Content="Pinot Noir" HorizontalAlignment="Left" Margin="202,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" Height="75" FontSize="24" FontFamily="Garamond"/>
-        <Button Content="Cake&#xD;&#xA;Wine" HorizontalAlignment="Left" Margin="338,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" IsEnabled="True" Height="75" FontSize="24" FontFamily="Garamond"/>
-        <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,530,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="SelectTableButton_Click"/>
-        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="Past_Orders"/>
+    <Grid Background="#FFD1BEA8">
+        <Button Content="Corona" HorizontalAlignment="Left" Margin="202,94,0,0" VerticalAlignment="Top" Width="110" Height="75" FontFamily="Garamond" FontSize="24" Background="#FFA46F57"/>
+        <Button Content="Steam&#xD;&#xA;Whistle" HorizontalAlignment="Left" Margin="338,94,0,0" VerticalAlignment="Top" Width="110" Height="75" FontFamily="Garamond" FontSize="24" Background="#FFA46F57" />
+        <Button x:Name="btnSoupSalad" Content="Pinot Noir" HorizontalAlignment="Left" Margin="202,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" Height="75" FontSize="24" FontFamily="Garamond" Background="#FFA46F57"/>
+        <Button Content="Cake&#xD;&#xA;Wine" HorizontalAlignment="Left" Margin="338,268,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,0.203" Height="75" FontSize="24" FontFamily="Garamond" Background="#FFA46F57"/>
+        <Button Content="Select Table" HorizontalAlignment="Left" Margin="202,530,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFFFE5DC" FontWeight="Bold" Click="SelectTableButton_Click"/>
+        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="202,574,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFFFE5DC" FontWeight="Bold" Click="Past_Orders"/>
         <Canvas HorizontalAlignment="Left" Height="481" Margin="10,100,0,0" VerticalAlignment="Top" Width="174" Background="#FFF0EDED">
             <StackPanel x:Name="stackPanelWineAndBeer"/>
             <Label x:Name="lblTable" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" FontFamily="Garamond" FontWeight="Bold" Canvas.Left="112" RenderTransformOrigin="0.492,0.153" Height="25" Canvas.Top="-54"/>
         </Canvas>
         <Label Content="Table Number:" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14"/>
         <Label Content="CURRENT ORDER" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Garamond" FontSize="14" Width="164"/>
-        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,490,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFDDDDDD" FontWeight="Bold" Click="BackToMenuButton_Click"/>
+        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="202,490,0,0" VerticalAlignment="Top" Width="199" Height="29" FontFamily="Garamond" FontSize="24" RenderTransformOrigin="0.269,0.72" Background="#FFFFE5DC" FontWeight="Bold" Click="BackToMenuButton_Click"/>
         <Label Content="Wine &amp; Beer" HorizontalAlignment="Left" Margin="225,19,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontFamily="Garamond"/>
         <StackPanel x:Name="stkPanelOptions" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.661,0.045" Canvas.Left="10" Canvas.Top="457" Margin="10,457,0,0"/>
     </Grid>

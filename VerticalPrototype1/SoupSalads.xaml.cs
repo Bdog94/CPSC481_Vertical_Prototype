@@ -176,7 +176,7 @@ namespace VerticalPrototype1
             }
             if (caesar == 0)
             {
-                MessageBox.Show("There are only 0 servings left of Caesar Salad. More will be available in 15 minutes.");
+                MessageBox.Show("There are only 0 servings left of Caesar Salad. More will be available in 15 minutes. Please inform your customer.");
             }
             foodOrder(e);
 
@@ -521,6 +521,14 @@ namespace VerticalPrototype1
             Allergies.Visibility = System.Windows.Visibility.Hidden;
             addClamSoup.Visibility = System.Windows.Visibility.Hidden;
             sideClamSoup.Visibility = System.Windows.Visibility.Hidden;
+            RemoveTS.Visibility = System.Windows.Visibility.Hidden;
+            AddTS.Visibility = System.Windows.Visibility.Hidden;
+            SideHS.Visibility = System.Windows.Visibility.Hidden;
+            RemoveHS.Visibility = System.Windows.Visibility.Hidden;
+            AddHS.Visibility = System.Windows.Visibility.Hidden;
+            sideCaesarBtn.Visibility = System.Windows.Visibility.Hidden;
+            removeCaesarBtn.Visibility = System.Windows.Visibility.Hidden;
+            AddCaesarBtn.Visibility = System.Windows.Visibility.Hidden;
 
         }
 
@@ -550,16 +558,17 @@ namespace VerticalPrototype1
 
         private void orderReady(object sender, TouchEventArgs e)
         {
-            if (x == 0)
+            MessageBox.Show("Order for Table 2 is ready.");
+            /*if (x == 0)
             {
                 MessageBox.Show("Order for Table 2 ready.");
                 x = 1;
             }
-            if (x == 1)
+            else if (x == 1)
             {
                 MessageBox.Show("Order for Table 5 ready.");
                 x = 0;
-            }
+            }*/
            
            
         }

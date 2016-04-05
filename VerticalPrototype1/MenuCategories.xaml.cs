@@ -119,20 +119,7 @@ namespace VerticalPrototype1
             MainWindow.currentOrderInterface.addFoodItem(food);
            
         }
-        private void orderReady(object sender, TouchEventArgs e)
-        {
-            if (x == 0)
-            {
-                MessageBox.Show("Order for Table 2 ready.");
-                x = 1;
-            }
-            if (x == 1)
-            {
-                MessageBox.Show("Order for Table 5 ready.");
-                x = 0;
-            }
 
-
-        }
+        
     }
 }

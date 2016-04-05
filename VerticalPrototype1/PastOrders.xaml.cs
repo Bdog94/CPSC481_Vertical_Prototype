@@ -28,7 +28,12 @@ namespace VerticalPrototype1
             for (int i = 0; i < MainWindow.pastOrders.Count; i++)
             {
                 Button btn = new Button();
-                btn.Content = "Test " + i;
+                btn.Height = 50;
+                btn.Width = 150;
+                btn.FontFamily = new FontFamily("Garamond");
+                btn.FontSize = 18;
+                btn.Content = "Order " + (MainWindow.pastOrders.Count - i);
+                btn.Background = Brushes.Cornsilk;
                 btn.Tag = i;
                 btn.Click += new RoutedEventHandler(ShowCurrentOrderN);
                 stackPanel.Children.Add(btn);
@@ -39,6 +44,7 @@ namespace VerticalPrototype1
         private void Delete_Button(object sender, RoutedEventArgs e)
         {
            currentOrderBeingShown.Delete();
+           MessageBox.Show("The kitchen has received your cancellation. If a modification is required, please send a new order for corresponding table.");
         }
 
         private void Copy(object sender, RoutedEventArgs e)
